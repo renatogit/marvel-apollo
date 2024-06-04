@@ -1,0 +1,57 @@
+{
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es2021": true,
+		"jest": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:eslint-plugin-import/recommended",
+		"plugin:prettier/recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:react/recommended",
+		"next/core-web-vitals",
+		"next"
+	],
+	"plugins": [
+		"prettier",
+		"react",
+		"react-hooks",
+		"eslint-plugin-prettier/recommended"
+	],
+	"rules": {
+		"no-unused-vars": "error",
+		"no-undef": "warn",
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": "error",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-sort-props": "error",
+		"react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+		"comma-dangle": ["off", "always"],
+		"react/no-unescaped-entities": "off",
+		"@next/next/no-page-custom-font": "off"
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12
+	},
+	"settings": {
+		"import/resolver": {
+			"alias": {
+				"map": [
+					["@/", "./*"],
+					["@/lib", "./lib/"],
+					["@/mocks", "./mocks/"],
+					["@/ui", "./app/ui/"]
+				],
+				"extensions": [".js", ".jsx", ".json"]
+			}
+		}
+	}
+}

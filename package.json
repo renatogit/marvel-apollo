@@ -1,0 +1,25 @@
+{
+  "name": "marvel-apollo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node --experimental-specifier-resolution=node ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@apollo/datasource-rest": "^6.2.2",
+    "@apollo/server": "^4.10.4",
+    "graphql": "^16.8.1",
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.4.5"
+  }
+}
