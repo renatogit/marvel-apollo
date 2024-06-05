@@ -1,7 +1,7 @@
 import {ApolloServer} from '@apollo/server';
 import {startStandaloneServer} from '@apollo/server/standalone';
 import {resolvers} from '../resolvers';
-import {typeDefs} from '../schema/comics';
+import typesArray from './schema.config';
 import {Comics} from '../resolvers/comics';
 
 interface ContextValue {
@@ -10,10 +10,8 @@ interface ContextValue {
 	};
 }
 
-// The ApolloServer constructor requires two parameters:
-// your schema definition and your set of resolvers.
 const server = new ApolloServer<ContextValue>({
-	typeDefs,
+	typeDefs: typesArray,
 	resolvers,
 });
 

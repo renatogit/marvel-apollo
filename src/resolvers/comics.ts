@@ -1,4 +1,4 @@
-import { MarvelAPI } from './marvel';
+import { MarvelAPI } from '../configs/marvelAPI.config';
 
 export class Comics extends MarvelAPI {
 	async getComics(): Promise<any> {
