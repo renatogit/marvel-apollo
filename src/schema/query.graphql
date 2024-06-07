@@ -2,4 +2,5 @@
 # clients can execute, along with the return type for each.
 type Query {
 	comics: ComicsAPI
+	comicsById(comicsId: ID!): ComicsAPI
 }

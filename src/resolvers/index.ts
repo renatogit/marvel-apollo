@@ -7,5 +7,10 @@ export const resolvers = {
 
 			return data;
 		},
+		comicsById: async (_, {comicsId}, {dataSources}) => {
+			const data = await dataSources.comics.getComicsById(comicsId);
+
+			return data;
+		},
 	},
 };
