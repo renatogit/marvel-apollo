@@ -1,21 +1,30 @@
+import path from 'path';
 import {ApolloServer} from '@apollo/server';
 import {startStandaloneServer} from '@apollo/server/standalone';
+import {loadFilesSync} from '@graphql-tools/load-files';
+import {mergeTypeDefs} from '@graphql-tools/merge';
 import {resolvers} from './resolvers';
-import typesArray from './configs/schema';
 import {Comics} from './resolvers/comics';
 
-interface ContextValue {
+const __dirname = path.resolve();
+
+interface IContextValue {
 	dataSources: {
 		comics: Comics;
 	};
 }
 
-const server = new ApolloServer<ContextValue>({
-	typeDefs: typesArray,
-	resolvers,
+const typesArray = loadFilesSync(path.join(__dirname, 'src/schema'), {
+	extensions: ['graphql'],
+	recursive: true,
 });
 
-export const {url} = await startStandaloneServer(server, {
+const server = new ApolloServer<IContextValue>({
+	typeDefs: mergeTypeDefs(typesArray),
+	resolvers
+});
+
+const {url} = await startStandaloneServer(server, {
 	context: async () => {
 		const {cache} = server;
 		return {
