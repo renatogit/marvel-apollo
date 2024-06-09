@@ -7,4 +7,11 @@ type Query {
 	comicsCreators(comicsId: ID!): ComicsAPI
 	comicsEvents(comicsId: ID!): ComicsAPI
 	comicsStories(comicsId: ID!): ComicsAPI
+
+	characters: ComicsAPI
+	charactersById(charactersId: ID!): ComicsAPI
+	charactersComics(charactersId: ID!): ComicsAPI
+	charactersCreators(charactersId: ID!): ComicsAPI
+	charactersEvents(charactersId: ID!): ComicsAPI
+	charactersStories(charactersId: ID!): ComicsAPI
 }
