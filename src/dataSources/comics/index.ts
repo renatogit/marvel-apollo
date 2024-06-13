@@ -1,6 +1,6 @@
-import {MarvelAPI} from '../configs/marvelAPI';
+const MarvelAPIComics = require('../../configs/marvelAPI');
 
-export class Comics extends MarvelAPI {
+class Comics extends MarvelAPIComics {
 	async getComics(): Promise<IComics[]> {
 		const data = await this.get('comics', {
 			params: this.params,
@@ -16,30 +16,44 @@ export class Comics extends MarvelAPI {
 	}
 
 	async getComicsCharacters(comicsId: string): Promise<IComics> {
-		const data = await this.get(`comics/${encodeURIComponent(comicsId)}/characters`, {
-			params: this.params,
-		});
+		const data = await this.get(
+			`comics/${encodeURIComponent(comicsId)}/characters`,
+			{
+				params: this.params,
+			}
+		);
 		return data;
 	}
 
 	async getComicsCreators(comicsId: string): Promise<IComics> {
-		const data = await this.get(`comics/${encodeURIComponent(comicsId)}/creators`, {
-			params: this.params,
-		});
+		const data = await this.get(
+			`comics/${encodeURIComponent(comicsId)}/creators`,
+			{
+				params: this.params,
+			}
+		);
 		return data;
 	}
 
 	async getComicsEvents(comicsId: string): Promise<IComics> {
-		const data = await this.get(`comics/${encodeURIComponent(comicsId)}/events`, {
-			params: this.params,
-		});
+		const data = await this.get(
+			`comics/${encodeURIComponent(comicsId)}/events`,
+			{
+				params: this.params,
+			}
+		);
 		return data;
 	}
 
 	async getComicsStories(comicsId: string): Promise<IComics> {
-		const data = await this.get(`comics/${encodeURIComponent(comicsId)}/stories`, {
-			params: this.params,
-		});
+		const data = await this.get(
+			`comics/${encodeURIComponent(comicsId)}/stories`,
+			{
+				params: this.params,
+			}
+		);
 		return data;
 	}
 }
+
+module.exports = Comics;

@@ -72,9 +72,9 @@ type MarvelAPIData {
 	"""
 	count: Float
 
-	# """
-	# The list of entities returned by the call
-	# """
+	"""
+	The list of entities returned by the call
+	"""
 	results: [ComicsResult]
 }
 
