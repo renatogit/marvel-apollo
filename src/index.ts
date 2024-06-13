@@ -1,35 +1,32 @@
-import path from 'path';
-import {ApolloServer} from '@apollo/server';
-import {startStandaloneServer} from '@apollo/server/standalone';
-import {loadFilesSync} from '@graphql-tools/load-files';
-import {mergeTypeDefs} from '@graphql-tools/merge';
-import {resolvers} from './resolvers';
-import {Comics} from './resolvers/comics';
+const path = require('path');
+const {ApolloServer} = require('@apollo/server');
+const {startStandaloneServer} = require('@apollo/server/standalone');
+const {loadFilesSync} = require('@graphql-tools/load-files');
+const {mergeTypeDefs, mergeResolvers} = require('@graphql-tools/merge');
 
-const __dirname = path.resolve();
+// TODO Tornar generico
+const ComicsDataSources = require('./dataSources/comics')
 
-interface IContextValue {
-	dataSources: {
-		comics: Comics;
-	};
-}
-
-const typesArray = loadFilesSync(path.join(__dirname, 'src/schema'), {
+const schemaFiles = loadFilesSync(path.join(__dirname, 'schemas'), {
 	extensions: ['graphql'],
 	recursive: true,
 });
 
-const server = new ApolloServer<IContextValue>({
-	typeDefs: mergeTypeDefs(typesArray),
-	resolvers
+const resolverFiles = loadFilesSync(path.join(__dirname, 'resolvers'), {
+	recursive: true,
 });
 
-const {url} = await startStandaloneServer(server, {
+const server = new ApolloServer({
+	typeDefs: mergeTypeDefs(schemaFiles),
+	resolvers: mergeResolvers(resolverFiles),
+});
+
+const url: Promise<{url: string}> = startStandaloneServer(server, {
 	context: async () => {
 		const {cache} = server;
 		return {
 			dataSources: {
-				comics: new Comics({cache}),
+				comics: new ComicsDataSources({cache}),
 			},
 		};
 	},
