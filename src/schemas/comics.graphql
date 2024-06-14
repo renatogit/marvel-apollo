@@ -1,22 +1,8 @@
-type ComicsGenericValues {
-	type: String
-	name: String
-	url: String
-	resourceURI: String
-	date: String
-	price: Float
-	path: String
-	extension: String
-	role: String
-	language: String
-	text: String
-}
-
-type ComicsGenericKeys {
+type GenericCollections {
 	available: Float
 	collectionURI: String
-	items: [ComicsGenericValues]
-	returned: String
+	items: [Uri]
+	returned: Float
 }
 
 type ComicsResult {
@@ -34,83 +20,68 @@ type ComicsResult {
 	issn: String
 	format: String
 	pageCount: Float
-	textObjects: [ComicsGenericValues]
 	resourceURI: String
-	urls: [ComicsGenericValues]
-	series: [ComicsGenericValues]
-	variants: [ComicsGenericValues]
-	collections: [String]
-	dates: [ComicsGenericValues]
-	prices: [ComicsGenericValues]
-	thumbnail: [ComicsGenericValues]
-	images: [ComicsGenericValues]
-	collectedIssues: [ComicsGenericValues]
-	creators: [ComicsGenericKeys]
-	characters: [ComicsGenericKeys]
-	stories: [ComicsGenericKeys]
-	events: [ComicsGenericKeys]
+	textObjects: [TextObjects]
+	urls: [Url]
+	series: [Uri]
+	variants: [Uri]
+	collections: [Uri]
+	dates: [Dates]
+	prices: [Price]
+	thumbnail: [Image]
+	images: [Image]
+	collectedIssues: [Uri]
+	creators: [GenericCollections]
+	characters: [GenericCollections]
+	stories: [GenericCollections]
+	events: [GenericCollections]
 }
 
-type MarvelAPIData {
+type ComicsData {
 	"""
-	The requested offset (skipped results) of the call
+	O deslocamento solicitado (resultados ignorados) da chamada
 	"""
 	offset: Float
 
 	"""
-	The requested result limit
+	O limite de resultados solicitado
 	"""
 	limit: Float
 
 	"""
-	The total number of results available
+	O número total de resultados disponíveis
 	"""
 	total: Float
 
 	"""
-	The total number of results returned by this call
+	O número total de resultados retornados por esta chamada
 	"""
 	count: Float
 
 	"""
-	The list of entities returned by the call
+	A lista de entidades retornadas pela chamada
 	"""
 	results: [ComicsResult]
 }
 
 type ComicsAPI {
 	"""
-	The HTTP status code of the returned result
+	O código do status HTTP da chamada
 	"""
 	code: Float
 
 	"""
-	A string description of the call status
+	Descrição do status da chamada
 	"""
 	status: String
 
 	"""
-	A container	The results returned by the call
+	Um contêiner dos resultados retornados pela chamada
 	"""
-	data: MarvelAPIData
+	data: ComicsData
 
 	"""
-	A digest value of the content
-	"""
-	etag: String
-
-	"""
-	The copyright notice for the returned result
-	"""
-	copyright: String
-
-	"""
-	The attribution notice for this result
+	O aviso de atribuição da chamada
 	"""
 	attributionText: String
-
-	"""
-	An HTML representation of the attribution notice for this result
-	"""
-	attributionHTML: String
 }
