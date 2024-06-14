@@ -1,10 +1,3 @@
-type GenericCollections {
-	available: Float
-	collectionURI: String
-	items: [Uri]
-	returned: Float
-}
-
 type ComicsResult {
 	id: Float
 	digitalId: Float

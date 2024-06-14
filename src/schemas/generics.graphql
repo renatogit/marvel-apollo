@@ -29,3 +29,10 @@ type Price {
 	type: String
 	price: Float
 }
+
+type GenericCollections {
+	available: Float
+	collectionURI: String
+	items: [Uri]
+	returned: Float
+}

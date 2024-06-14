@@ -1,0 +1,70 @@
+query GetCharacters($charactersId: ID!) {
+  characters(charactersId: $charactersId) {
+    code
+    attributionText
+    data {
+      count
+      limit
+      offset
+      total
+      results {
+        id
+        description
+        modified
+        resourceURI
+				comics {
+					available
+					collectionURI
+					returned
+					items {
+						name
+						resourceURI
+						role
+					}
+				}
+				events {
+					available
+					collectionURI
+					items {
+						name
+						resourceURI
+						role
+					}
+					returned
+				}
+				series {
+					available
+					collectionURI
+					items {
+						name
+						resourceURI
+						role
+					}
+					returned
+				}
+				stories {
+					available
+					collectionURI
+					items {
+						name
+						resourceURI
+						role
+					}
+					returned
+				}
+				thumbnail {
+					extension
+					path
+				}
+				urls {
+					type
+					url
+				}
+        urls {
+          type
+          url
+        }
+      }
+    }
+  }
+}
