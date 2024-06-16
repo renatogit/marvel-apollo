@@ -7,7 +7,6 @@ const {mergeTypeDefs, mergeResolvers} = require('@graphql-tools/merge');
 const dataSources = require('./dataSources');
 
 const schemaFiles = loadFilesSync(path.join(__dirname, 'schemas'), {
-	extensions: ['graphql'],
 	recursive: true,
 });
 

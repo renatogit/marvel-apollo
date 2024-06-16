@@ -9,7 +9,11 @@ query GetComics {
 			total
 			results {
 				id
-				collections
+				collections {
+					name
+					resourceURI
+					role
+				}
 				description
 				diamondCode
 				digitalId

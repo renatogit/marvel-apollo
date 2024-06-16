@@ -5,10 +5,9 @@
 		"lib": ["es6"],
 		"target": "es6",
 		"module": "commonjs",
-		// "moduleDetection": "force",
 		"moduleResolution": "node",
 		"esModuleInterop": true,
-		"types": ["node"],
+		"types": ["jest","node"],
 		"typeRoots": ["node_modules/@types", "src/@types"]
 	},
 	"files": ["src/types/graphql.d.ts"],
