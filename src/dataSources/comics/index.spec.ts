@@ -16,7 +16,7 @@ const paramsComicsApi: IComicsParams = {
 	},
 };
 
-describe('comics/comics', () => {
+describe('dataSources/comics', () => {
 	let comics: typeof ComicsDataSources;
 	beforeEach(() => {
 		comics = new ComicsDataSources();
