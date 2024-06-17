@@ -7,10 +7,16 @@
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"esModuleInterop": true,
-		"types": ["jest","node"],
-		"typeRoots": ["node_modules/@types", "src/@types"]
+		"types": ["jest", "node"],
+		"typeRoots": ["node_modules/@types", "src/@types"],
+		"baseUrl": "./src",
+		"paths": {
+			"@mock/*": ["mock/*"],
+			"@query/*": ["query/*"],
+			"@configs/*": ["./configs/*"],
+		}
 	},
 	"files": ["src/types/graphql.d.ts"],
-	"include": ["src/**/*"],
+	"include": ["src/**/*", "mock"],
 	"exclude": ["node_modules", "**/*.spec.ts"]
 }
