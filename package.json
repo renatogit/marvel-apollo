@@ -4,9 +4,10 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "tsc && node ./dist/index.js",
+		"start": "tsc && node ./dist/src/index.js",
 		"coverage": "jest --coverage && http-server coverage/lcov-report",
-		"test": "jest --watch"
+		"test": "jest",
+		"test:dev": "jest --coverage --watch"
 	},
 	"keywords": [],
 	"author": "",

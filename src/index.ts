@@ -1,23 +1,6 @@
-const path = require('path');
-const {ApolloServer} = require('@apollo/server');
 const {startStandaloneServer} = require('@apollo/server/standalone');
-const {loadFilesSync} = require('@graphql-tools/load-files');
-const {mergeTypeDefs, mergeResolvers} = require('@graphql-tools/merge');
-
+const server = require('./server')
 const dataSources = require('./dataSources');
-
-const schemaFiles = loadFilesSync(path.join(__dirname, 'schemas'), {
-	recursive: true,
-});
-
-const resolverFiles = loadFilesSync(path.join(__dirname, 'resolvers'), {
-	recursive: true,
-});
-
-const server = new ApolloServer({
-	typeDefs: mergeTypeDefs(schemaFiles),
-	resolvers: mergeResolvers(resolverFiles),
-});
 
 const url: Promise<{url: string}> = startStandaloneServer(server, {
 	context: async () => {
