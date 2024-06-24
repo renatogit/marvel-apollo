@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generate snapshots 1`] = `
+{
+  "kind": "single",
+  "singleResult": {
+    "data": {
+      "comicsById": {
+        "attributionText": "mock-data",
+        "code": 200,
+        "data": {
+          "count": 1,
+          "limit": 20,
+          "offset": 0,
+          "results": [
+            {
+              "collectedIssues": [
+                {
+                  "name": "mock-data",
+                  "resourceURI": "mock-data",
+                },
+              ],
+              "collections": [
+                {
+                  "name": "mock-data",
+                  "resourceURI": "mock-data",
+                  "role": null,
+                },
+              ],
+              "dates": [
+                {
+                  "date": "mock-data",
+                  "type": "mock-data",
+                },
+                {
+                  "date": "mock-data",
+                  "type": "mock-data",
+                },
+              ],
+              "description": "mock-data",
+              "diamondCode": "mock-data",
+              "digitalId": 8701,
+              "ean": "mock-data",
+              "format": "mock-data",
+              "id": 15808,
+              "images": [
+                {
+                  "extension": "mock-data",
+                  "path": "mock-data",
+                },
+              ],
+              "isbn": "mock-data",
+              "issn": "mock-data",
+              "issueNumber": 110,
+              "modified": "mock-data",
+              "pageCount": 0,
+              "prices": [
+                {
+                  "price": 2.99,
+                  "type": "mock-data",
+                },
+                {
+                  "price": 1.99,
+                  "type": "mock-data",
+                },
+              ],
+              "resourceURI": "mock-data",
+              "textObjects": [
+                {
+                  "language": "mock-data",
+                  "text": "mock-data",
+                  "type": "mock-data",
+                },
+              ],
+              "title": "mock-data",
+              "upc": "mock-data",
+              "urls": [
+                {
+                  "type": "mock-data",
+                  "url": "mock-data",
+                },
+                {
+                  "type": "mock-data",
+                  "url": "mock-data",
+                },
+              ],
+              "variantDescription": "mock-data",
+              "variants": [
+                {
+                  "name": "mock-data",
+                  "resourceURI": "mock-data",
+                },
+                {
+                  "name": "mock-data",
+                  "resourceURI": "mock-data",
+                },
+              ],
+            },
+          ],
+          "total": 1,
+        },
+      },
+    },
+    "errors": undefined,
+  },
+}
+`;
