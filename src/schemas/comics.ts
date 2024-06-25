@@ -25,10 +25,10 @@ module.exports = /* GraphQL */ `
 		thumbnail: [Image]
 		images: [Image]
 		collectedIssues: [Uri]
-		creators: [GenericCollections]
-		characters: [GenericCollections]
-		stories: [GenericCollections]
-		events: [GenericCollections]
+		creators: GenericCollections
+		characters: GenericCollections
+		stories: GenericCollections
+		events: GenericCollections
 	}
 
 	type ComicsData {
