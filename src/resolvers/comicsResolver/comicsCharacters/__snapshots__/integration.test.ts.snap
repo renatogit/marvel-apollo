@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolvers/comicsCharactersResolver/integration fetches comicsCharacters and generate snapshots 1`] = `
+{
+  "kind": "single",
+  "singleResult": {
+    "data": {
+      "comicsCharacters": {
+        "attributionText": "mock data",
+        "code": 200,
+        "data": {
+          "count": 1,
+          "limit": 20,
+          "offset": 0,
+          "results": [
+            {
+              "collectedIssues": [
+                {
+                  "name": "mock data",
+                  "resourceURI": "mock data",
+                },
+              ],
+              "collections": [
+                {
+                  "name": "mock data",
+                  "resourceURI": "mock data",
+                  "role": "mock data",
+                },
+              ],
+              "dates": [
+                {
+                  "date": "mock data",
+                  "type": "mock data",
+                },
+              ],
+              "description": "mock data",
+              "diamondCode": "mock data",
+              "digitalId": 89.3,
+              "ean": "mock data",
+              "format": "mock data",
+              "id": 1011010,
+              "images": [
+                {
+                  "extension": "mock data",
+                  "path": "mock data",
+                },
+              ],
+              "isbn": "mock data",
+              "issn": "mock data",
+              "issueNumber": 89.3,
+              "modified": "mock data",
+              "pageCount": 89.3,
+              "prices": [
+                {
+                  "price": 89.3,
+                  "type": "mock data",
+                },
+              ],
+              "resourceURI": "mock data",
+              "textObjects": [
+                {
+                  "language": "mock data",
+                  "text": "mock",
+                  "type": "mock data",
+                },
+              ],
+              "title": "mock data",
+              "upc": "mock data",
+              "urls": [
+                {
+                  "type": "mock data",
+                  "url": "mock data",
+                },
+                {
+                  "type": "mock data",
+                  "url": "mock data",
+                },
+              ],
+              "variantDescription": "mock data",
+              "variants": [
+                {
+                  "name": "mock data",
+                  "resourceURI": "mock data",
+                },
+              ],
+            },
+          ],
+          "total": 1,
+        },
+      },
+    },
+    "errors": undefined,
+  },
+}
+`;
