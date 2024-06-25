@@ -5,7 +5,6 @@ const QUERY_GET_COMICS_CREATORS = require('@query/comics/queryComicsCreators');
 const MOCK_GET_COMICS_CREATORS = require('@mock/comics/mockComicsCreators');
 
 describe('resolvers/comicsResolver/comicsCreators', () => {
-	const errorMessage = 'mockError: Failed to fetch comicsCreators';
 	const comicsId = {comicsId: 'fake-code'};
 
 	it('should return the comicsCreators entity data', async () => {
@@ -28,19 +27,17 @@ describe('resolvers/comicsResolver/comicsCreators', () => {
 	});
 
 	it('should return request error', async () => {
+		const errorMessage = 'mockError: Failed to fetch comicsCreators';
+
 		const error = async () =>
-			await ComicsCreatorsResolver.Query.comicsCreators(
-				null,
-				{comicsId: 'fake-code'},
-				{
-					dataSources: {
-						comics: {
-							getComicsCreators: () =>
-								Promise.reject(new Error(errorMessage)),
-						},
+			await ComicsCreatorsResolver.Query.comicsCreators(null, comicsId, {
+				dataSources: {
+					comics: {
+						getComicsCreators: () =>
+							Promise.reject(new Error(errorMessage)),
 					},
-				}
-			);
+				},
+			});
 
 		await expect(error).rejects.toThrow(errorMessage);
 	});

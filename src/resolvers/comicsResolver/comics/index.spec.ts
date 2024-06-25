@@ -5,7 +5,6 @@ const QUERY_GET_COMICS = require('@query/comics/queryComics');
 const MOCK_GET_COMICS = require('@mock/comics/mockComics');
 
 describe('resolvers/comicsResolver/comics', () => {
-	const errorMessage = 'mockError: Failed to fetch comics';
 	it('should return the comics entity data', async () => {
 		const {server, mockResponse} = await ServerGetComics(
 			DataSourcesComicsAPI,
@@ -22,6 +21,8 @@ describe('resolvers/comicsResolver/comics', () => {
 	});
 
 	it('should return request error', async () => {
+		const errorMessage = 'mockError: Failed to fetch comics';
+
 		const error = async () =>
 			await ComicsResolver.Query.comics(null, null, {
 				dataSources: {
