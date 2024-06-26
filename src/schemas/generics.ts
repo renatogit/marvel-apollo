@@ -13,6 +13,7 @@ module.exports = /* GraphQL */ `
 		name: String
 		resourceURI: String
 		role: String
+		type: String
 	}
 
 	type TextObjects {
@@ -33,8 +34,8 @@ module.exports = /* GraphQL */ `
 
 	type GenericCollections {
 		available: Float
+		returned: Float
 		collectionURI: String
 		items: [Uri]
-		returned: Float
 	}
 `;
