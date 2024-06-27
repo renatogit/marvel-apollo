@@ -6,7 +6,7 @@ module.exports = /* GraphQL */ `
 		comicsById(comicsId: ID!): ComicsAPI
 		comicsCharacters(comicsId: ID!): ComicsAPI
 		comicsCreators(comicsId: ID!): ComicsAPI
-		comicsEvents(comicsId: ID!): ComicsAPI
+		comicsEvents(comicsId: ID!): EventDataWrapper
 		comicsStories(comicsId: ID!): ComicsAPI
 
 		characters: CharactersAPI
