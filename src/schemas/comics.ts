@@ -25,10 +25,10 @@ module.exports = /* GraphQL */ `
 		images: [Image]
 		collectedIssues: [Uri]
 		series: GenericCollections
-		creators: GenericCollections
-		characters: GenericCollections
-		stories: GenericCollections
-		events: GenericCollections
+		creators: [GenericCollections]
+		characters: [GenericCollections]
+		stories: [GenericCollections]
+		events: [GenericCollections]
 	}
 
 	# Inclui campos utilizados em Events

@@ -2,7 +2,11 @@ module.exports = `
 	query GetComicsById($comicsId: ID!) {
 		comicsById(comicsId: $comicsId) {
 			code
+			status
+			copyright
 			attributionText
+			attributionHTML
+			etag
 			data {
 				count
 				limit
@@ -10,11 +14,6 @@ module.exports = `
 				total
 				results {
 					id
-					collections{
-						name
-						resourceURI
-						role
-					}
 					description
 					diamondCode
 					digitalId
@@ -25,6 +24,15 @@ module.exports = `
 					issueNumber
 					modified
 					pageCount
+					resourceURI
+					title
+					upc
+					variantDescription
+					collections {
+						name
+						resourceURI
+						role
+					}
 					collectedIssues {
 						resourceURI
 						name
@@ -41,7 +49,6 @@ module.exports = `
 						type
 						date
 					}
-					resourceURI
 					urls {
 						type
 						url
@@ -55,9 +62,47 @@ module.exports = `
 						name
 						resourceURI
 					}
-					title
-					upc
-					variantDescription
+					series {
+						resourceURI
+						name
+					}
+					creators {
+						available
+						returned
+						collectionURI
+						items {
+							name
+							resourceURI
+							role
+						}
+					}
+					characters {
+						available
+						returned
+						collectionURI
+						items {
+							resourceURI
+							name
+		 				}
+					}
+					stories {
+						available
+						returned
+						collectionURI
+						items {
+							resourceURI
+							name
+						}
+					}
+					events {
+						available
+						returned
+						collectionURI
+						items {
+							resourceURI
+							name
+						}
+					}
 				}
 			}
 		}

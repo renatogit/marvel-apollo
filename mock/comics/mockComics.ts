@@ -1,6 +1,10 @@
 module.exports = {
 	code: 200,
-	attributionText: 'Data provided by Marvel. © 2024 MARVEL',
+	status: 'mock data',
+	copyright: 'mock data',
+	attributionText: 'mock data',
+	attributionHTML: 'mock data',
+	etag: 'mock data',
 	data: {
 		count: 20,
 		limit: 20,
@@ -81,6 +85,80 @@ module.exports = {
 				title: 'mock data',
 				upc: 'mock data',
 				variantDescription: 'mock data',
+				stories: [
+					{
+						available: 161,
+						returned: 20,
+						collectionURI: 'mock data',
+						items: [
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+						],
+					},
+				],
+				series: {
+					resourceURI: 'mock data',
+					name: 'mock data',
+				},
+				characters: [
+					{
+						available: 113,
+						returned: 20,
+						collectionURI: '12744',
+						items: [
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+						],
+					},
+				],
+				creators: [
+					{
+						available: 102,
+						returned: 20,
+						collectionURI: 'mock data',
+						items: [
+							{
+								name: 'mock data',
+								resourceURI: 'mock data',
+								role: 'mock data',
+							},
+							{
+								name: 'mock data',
+								resourceURI: 'mock data',
+								role: 'mock data',
+							},
+						],
+					},
+				],
+				events: [
+					{
+						available: 113,
+						returned: 20,
+						collectionURI: '12744',
+						items: [
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+						],
+					},
+				],
 			},
 			{
 				id: 82965,
@@ -113,7 +191,12 @@ module.exports = {
 						price: 0,
 					},
 				],
-				images: [],
+				images: [
+					{
+						path: 'mock data',
+						extension: 'mock data',
+					},
+				],
 				dates: [
 					{
 						type: 'mock data',
@@ -145,6 +228,76 @@ module.exports = {
 				title: 'mock data',
 				upc: 'mock data',
 				variantDescription: 'mock data',
+				stories: [
+					{
+						available: 161,
+						returned: 20,
+						collectionURI: 'mock data',
+						items: [
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+						],
+					},
+				],
+				series: {
+					resourceURI: 'mock data',
+					name: 'mock data',
+				},
+				characters: [
+					{
+						available: 113,
+						returned: 20,
+						collectionURI: '12744',
+						items: [
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+						],
+					},
+				],
+				creators: [
+					{
+						available: 102,
+						returned: 20,
+						collectionURI: 'mock data',
+						items: [
+							{
+								name: 'mock data',
+								resourceURI: 'mock data',
+								role: 'mock data',
+							},
+							{
+								name: 'mock data',
+								resourceURI: 'mock data',
+								role: 'mock data',
+							},
+						],
+					},
+				],
+				events: [
+					{
+						available: 89.3,
+						returned: 89.3,
+						collectionURI: 'mock data',
+						items: [
+							{
+								resourceURI: 'mock data',
+								name: 'mock data',
+							},
+						],
+					},
+				],
 			},
 		],
 	},

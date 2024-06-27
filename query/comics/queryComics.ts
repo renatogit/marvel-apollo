@@ -2,7 +2,11 @@ module.exports = `
 	query GetComics {
 		comics {
 			code
+			status
+			copyright
 			attributionText
+			attributionHTML
+			etag
 			data {
 				count
 				limit
@@ -57,6 +61,47 @@ module.exports = `
 					variants {
 						name
 						resourceURI
+					}
+					series {
+						resourceURI
+						name
+					}
+					creators {
+						available
+						returned
+						collectionURI
+						items {
+							name
+							resourceURI
+							role
+						}
+					}
+					characters {
+						available
+						returned
+						collectionURI
+						items {
+							resourceURI
+							name
+		 				}
+					}
+					stories {
+						available
+						returned
+						collectionURI
+						items {
+							resourceURI
+							name
+						}
+					}
+					events {
+						available
+						returned
+						collectionURI
+						items {
+							resourceURI
+							name
+						}
 					}
 				}
 			}

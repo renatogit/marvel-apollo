@@ -38,4 +38,9 @@ module.exports = /* GraphQL */ `
 		collectionURI: String
 		items: [Uri]
 	}
+	# Entidade Comics
+	extend type GenericCollections {
+		name: String
+		resourceURI: String
+	}
 `;
