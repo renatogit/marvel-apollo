@@ -7,7 +7,7 @@
 		"start": "tsc && node ./dist/src/index.js",
 		"coverage": "jest --coverage && http-server coverage/lcov-report",
 		"test": "jest",
-		"test:dev": "jest --coverage --watch"
+		"test:dev": "tsc && jest --coverage --watch"
 	},
 	"keywords": [],
 	"author": "",

@@ -1,13 +1,11 @@
-//  The "Query" type is special: it lists all of the available queries that
-//  clients can execute, along with the return type for each.
 module.exports = /* GraphQL */ `
 	type Query {
-		comics: ComicsAPI
-		comicsById(comicsId: ID!): ComicsAPI
-		comicsCharacters(comicsId: ID!): ComicsAPI
-		comicsCreators(comicsId: ID!): ComicsAPI
+		comics: ComicDataWrapper
+		comicsById(comicsId: ID!): ComicDataWrapper
+		comicsCharacters(comicsId: ID!): ComicDataWrapper
+		comicsCreators(comicsId: ID!): ComicDataWrapper
 		comicsEvents(comicsId: ID!): EventDataWrapper
-		comicsStories(comicsId: ID!): ComicsAPI
+		comicsStories(comicsId: ID!): ComicDataWrapper
 
 		characters: CharactersAPI
 		charactersById(charactersId: ID!): CharactersAPI
