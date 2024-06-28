@@ -1,64 +1,69 @@
 module.exports = `
 query GetComicsCharacters($comicsId: ID!) {
 	comicsCharacters(comicsId: $comicsId) {
-	code
-	attributionText
-	data {
-		count
-		limit
-		offset
-		total
-		results {
-			id
-			collections {
+		code
+		status
+		copyright
+		attributionText
+		attributionHTML
+		etag
+		data {
+			count
+			limit
+			offset
+			total
+			results {
+				id
 				name
+				description
+				modified
 				resourceURI
-				role
+				urls {
+					type
+					url
+				}
+				thumbnail {
+					path
+					extension
+				}
+				comics {
+					available
+					returned
+					collectionURI
+					items {
+						resourceURI
+						name
+					}
+				}
+				stories {
+					available
+					returned
+					collectionURI
+					items {
+						resourceURI
+						name
+						type
+					}
+				}
+				events {
+					available
+					returned
+					collectionURI
+					items {
+						resourceURI
+						name
+					}
+				}
+				series {
+					available
+					returned
+					collectionURI
+					items {
+						resourceURI
+						name
+					}
+				}
 			}
-			description
-			diamondCode
-			digitalId
-			ean
-			format
-			isbn
-			issn
-			issueNumber
-			modified
-			pageCount
-			collectedIssues {
-				resourceURI
-				name
-			}
-			prices {
-				type
-				price
-			}
-			images {
-				path
-				extension
-			}
-			dates {
-				type
-				date
-			}
-			resourceURI
-			urls {
-				type
-				url
-			}
-			textObjects {
-				type
-				language
-				text
-			}
-			variants {
-				name
-				resourceURI
-			}
-			title
-			upc
-			variantDescription
 		}
 	}
-}
 }`;
