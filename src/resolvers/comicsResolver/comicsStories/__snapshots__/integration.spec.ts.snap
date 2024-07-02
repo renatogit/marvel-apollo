@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolvers/comicsStoriesResolver/integration fetches comicsStories and generate snapshots 1`] = `
+{
+  "kind": "single",
+  "singleResult": {
+    "data": {
+      "comicsStories": {
+        "attributionHTML": "mock data",
+        "attributionText": "mock data",
+        "code": 200,
+        "copyright": "mock data",
+        "data": {
+          "count": 2,
+          "limit": 20,
+          "offset": 0,
+          "results": [
+            {
+              "characters": {
+                "available": 1,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
+              },
+              "comics": {
+                "available": 1,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
+              },
+              "creators": {
+                "available": 1,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
+              },
+              "description": "mock data",
+              "events": {
+                "available": 1,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
+              },
+              "id": 21328,
+              "modified": "mock data",
+              "originalissue": {
+                "name": "mock data",
+                "resourceURI": "mock data",
+              },
+              "resourceURI": "mock data",
+              "series": {
+                "available": 1,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
+              },
+              "thumbnail": {
+                "extension": "mock data",
+                "path": "mock data",
+              },
+              "title": "mock data",
+              "type": "mock data",
+            },
+            {
+              "characters": {
+                "available": 1,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
+              },
+              "comics": {
+                "available": 1,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
+              },
+              "creators": {
+                "available": 1,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
+              },
+              "description": "mock data",
+              "events": {
+                "available": 1,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
+              },
+              "id": 21329,
+              "modified": "mock data",
+              "originalissue": {
+                "name": "mock data",
+                "resourceURI": "mock data",
+              },
+              "resourceURI": "mock data",
+              "series": {
+                "available": 1,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
+              },
+              "thumbnail": {
+                "extension": "mock data",
+                "path": "mock data",
+              },
+              "title": "mock data",
+              "type": "mock data",
+            },
+          ],
+          "total": 2,
+        },
+        "etag": "mock data",
+        "status": "mock data",
+      },
+    },
+    "errors": undefined,
+  },
+}
+`;
