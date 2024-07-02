@@ -1,6 +1,10 @@
 module.exports = {
 	code: 200,
-	attributionText: 'Data provided by Marvel. © 2024 MARVEL',
+	status: 'mock data',
+	copyright: 'mock data',
+	attributionText: 'mock data',
+	attributionHTML: 'mock data',
+	etag: 'mock data',
 	data: {
 		count: 9,
 		limit: 20,
@@ -9,47 +13,50 @@ module.exports = {
 		results: [
 			{
 				id: 87,
-				collections: [
-					{
-						name: 'mock data',
-						resourceURI: 'mock data',
-						role: 'mock data',
-					},
-				],
-				description: 'mock data',
-				diamondCode: 'mock data',
-				digitalId: 89.3,
-				ean: 'mock data',
-				format: 'mock data',
-				isbn: 'mock data',
-				issn: 'mock data',
-				issueNumber: 89.3,
 				modified: 'mock data',
-				pageCount: 89.3,
-				collectedIssues: [
-					{
-						name: 'mock data',
-						resourceURI: 'mock data',
-					},
-				],
-				prices: [
-					{
-						type: 'mock data',
-						price: 89.3,
-					},
-				],
-				images: [
-					{
-						path: 'mock data',
-						extension: 'mock data',
-					},
-				],
-				dates: [
-					{
-						type: 'mock data',
-						date: 'mock data',
-					},
-				],
+				comics: {
+					available: 89.3,
+					returned: 89.3,
+					collectionURI: 'mock data',
+					items: [
+						{
+							resourceURI: 'mock data',
+							name: 'mock data',
+						},
+					],
+				},
+				events: {
+					available: 89.3,
+					returned: 89.3,
+					collectionURI: 'mock data',
+					items: [
+						{
+							resourceURI: 'mock data',
+							name: 'mock data',
+						},
+					],
+				},
+				series: {
+					available: 89.3,
+					returned: 89.3,
+					collectionURI: 'mock data',
+					items: [
+						{
+							name: 'mock data',
+							resourceURI: 'mock data',
+						},
+					],
+				},
+				stories: null,
+				suffix: 'mock data',
+				thumbnail: {
+					path: 'mock data',
+					extension: 'mock data',
+				},
+				lastName: 'mock data',
+				middleName: 'mock data',
+				firstName: 'mock data',
+				fullName: 'mock data',
 				resourceURI: 'mock data',
 				urls: [
 					{
@@ -57,66 +64,53 @@ module.exports = {
 						url: 'mock data',
 					},
 				],
-				textObjects: [
-					{
-						type: 'mock data',
-						language: 'mock data',
-						text: 'mock data',
-					},
-				],
-				variants: [
-					{
-						name: 'mock data',
-						resourceURI: 'mock data',
-					},
-				],
-				title: 'mock data',
-				upc: 'mock data',
-				variantDescription: 'mock data',
 			},
 			{
-				id: 24,
-				collections: [
-					{
-						name: 'mock data',
-						resourceURI: 'mock data',
-						role: 'mock data',
-					},
-				],
-				description: 'mock data',
-				diamondCode: 'mock data',
-				digitalId: 89.3,
-				ean: 'mock data',
-				format: 'mock data',
-				isbn: 'mock data',
-				issn: 'mock data',
-				issueNumber: 89.3,
+				id: 87,
 				modified: 'mock data',
-				pageCount: 89.3,
-				collectedIssues: [
-					{
-						name: 'mock data',
-						resourceURI: 'mock data',
-					},
-				],
-				prices: [
-					{
-						type: 'mock data',
-						price: 89.3,
-					},
-				],
-				images: [
-					{
-						path: 'mock data',
-						extension: 'mock data',
-					},
-				],
-				dates: [
-					{
-						type: 'mock data',
-						date: 'mock data',
-					},
-				],
+				comics: {
+					available: 89.3,
+					returned: 89.3,
+					collectionURI: 'mock data',
+					items: [
+						{
+							resourceURI: 'mock data',
+							name: 'mock data',
+						},
+					],
+				},
+				events: {
+					available: 89.3,
+					returned: 89.3,
+					collectionURI: 'mock data',
+					items: [
+						{
+							resourceURI: 'mock data',
+							name: 'mock data',
+						},
+					],
+				},
+				series: {
+					available: 89.3,
+					returned: 89.3,
+					collectionURI: 'mock data',
+					items: [
+						{
+							name: 'mock data',
+							resourceURI: 'mock data',
+						},
+					],
+				},
+				stories: null,
+				suffix: 'mock data',
+				thumbnail: {
+					path: 'mock data',
+					extension: 'mock data',
+				},
+				lastName: 'mock data',
+				middleName: 'mock data',
+				firstName: 'mock data',
+				fullName: 'mock data',
 				resourceURI: 'mock data',
 				urls: [
 					{
@@ -124,22 +118,6 @@ module.exports = {
 						url: 'mock data',
 					},
 				],
-				textObjects: [
-					{
-						type: 'mock data',
-						language: 'mock data',
-						text: 'mock data',
-					},
-				],
-				variants: [
-					{
-						name: 'mock data',
-						resourceURI: 'mock data',
-					},
-				],
-				title: 'mock data',
-				upc: 'mock data',
-				variantDescription: 'mock data',
 			},
 		],
 	},

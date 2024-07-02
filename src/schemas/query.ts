@@ -3,7 +3,7 @@ module.exports = /* GraphQL */ `
 		comics: ComicDataWrapper
 		comicsById(comicsId: ID!): ComicDataWrapper
 		comicsCharacters(comicsId: ID!): CharacterDataWrapper
-		comicsCreators(comicsId: ID!): ComicDataWrapper
+		comicsCreators(comicsId: ID!): CreatorDataWrapper
 		comicsEvents(comicsId: ID!): EventDataWrapper
 		comicsStories(comicsId: ID!): ComicDataWrapper
 

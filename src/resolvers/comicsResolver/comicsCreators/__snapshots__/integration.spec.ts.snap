@@ -6,150 +6,128 @@ exports[`resolvers/comicsCreatorsResolver/integration fetches comicsCreators and
   "singleResult": {
     "data": {
       "comicsCreators": {
-        "attributionText": "Data provided by Marvel. © 2024 MARVEL",
+        "attributionHTML": "mock data",
+        "attributionText": "mock data",
         "code": 200,
+        "copyright": "mock data",
         "data": {
           "count": 9,
           "limit": 20,
           "offset": 0,
           "results": [
             {
-              "collectedIssues": [
-                {
-                  "name": "mock data",
-                  "resourceURI": "mock data",
-                },
-              ],
-              "collections": [
-                {
-                  "name": "mock data",
-                  "resourceURI": "mock data",
-                  "role": "mock data",
-                },
-              ],
-              "dates": [
-                {
-                  "date": "mock data",
-                  "type": "mock data",
-                },
-              ],
-              "description": "mock data",
-              "diamondCode": "mock data",
-              "digitalId": 89.3,
-              "ean": "mock data",
-              "format": "mock data",
+              "comics": {
+                "available": 89.3,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 89.3,
+              },
+              "events": {
+                "available": 89.3,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 89.3,
+              },
+              "firstName": "mock data",
+              "fullName": "mock data",
               "id": 87,
-              "images": [
-                {
-                  "extension": "mock data",
-                  "path": "mock data",
-                },
-              ],
-              "isbn": "mock data",
-              "issn": "mock data",
-              "issueNumber": 89.3,
+              "lastName": "mock data",
+              "middleName": "mock data",
               "modified": "mock data",
-              "pageCount": 89.3,
-              "prices": [
-                {
-                  "price": 89.3,
-                  "type": "mock data",
-                },
-              ],
               "resourceURI": "mock data",
-              "textObjects": [
-                {
-                  "language": "mock data",
-                  "text": "mock data",
-                  "type": "mock data",
-                },
-              ],
-              "title": "mock data",
-              "upc": "mock data",
+              "series": {
+                "available": 89.3,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 89.3,
+              },
+              "stories": null,
+              "suffix": "mock data",
+              "thumbnail": {
+                "extension": "mock data",
+                "path": "mock data",
+              },
               "urls": [
                 {
                   "type": "mock data",
                   "url": "mock data",
-                },
-              ],
-              "variantDescription": "mock data",
-              "variants": [
-                {
-                  "name": "mock data",
-                  "resourceURI": "mock data",
                 },
               ],
             },
             {
-              "collectedIssues": [
-                {
-                  "name": "mock data",
-                  "resourceURI": "mock data",
-                },
-              ],
-              "collections": [
-                {
-                  "name": "mock data",
-                  "resourceURI": "mock data",
-                  "role": "mock data",
-                },
-              ],
-              "dates": [
-                {
-                  "date": "mock data",
-                  "type": "mock data",
-                },
-              ],
-              "description": "mock data",
-              "diamondCode": "mock data",
-              "digitalId": 89.3,
-              "ean": "mock data",
-              "format": "mock data",
-              "id": 24,
-              "images": [
-                {
-                  "extension": "mock data",
-                  "path": "mock data",
-                },
-              ],
-              "isbn": "mock data",
-              "issn": "mock data",
-              "issueNumber": 89.3,
+              "comics": {
+                "available": 89.3,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 89.3,
+              },
+              "events": {
+                "available": 89.3,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 89.3,
+              },
+              "firstName": "mock data",
+              "fullName": "mock data",
+              "id": 87,
+              "lastName": "mock data",
+              "middleName": "mock data",
               "modified": "mock data",
-              "pageCount": 89.3,
-              "prices": [
-                {
-                  "price": 89.3,
-                  "type": "mock data",
-                },
-              ],
               "resourceURI": "mock data",
-              "textObjects": [
-                {
-                  "language": "mock data",
-                  "text": "mock data",
-                  "type": "mock data",
-                },
-              ],
-              "title": "mock data",
-              "upc": "mock data",
+              "series": {
+                "available": 89.3,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 89.3,
+              },
+              "stories": null,
+              "suffix": "mock data",
+              "thumbnail": {
+                "extension": "mock data",
+                "path": "mock data",
+              },
               "urls": [
                 {
                   "type": "mock data",
                   "url": "mock data",
-                },
-              ],
-              "variantDescription": "mock data",
-              "variants": [
-                {
-                  "name": "mock data",
-                  "resourceURI": "mock data",
                 },
               ],
             },
           ],
           "total": 9,
         },
+        "etag": "mock data",
+        "status": "mock data",
       },
     },
     "errors": undefined,

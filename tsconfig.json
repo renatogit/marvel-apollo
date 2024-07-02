@@ -12,8 +12,7 @@
 		"baseUrl": "./src",
 		"paths": {
 			"@mock/*": ["mock/*"],
-			"@query/*": ["query/*"],
-			"@configs/*": ["./configs/*"],
+			"@query/*": ["query/*"]
 		}
 	},
 	"files": ["src/types/graphql.d.ts"],
