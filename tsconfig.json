@@ -11,6 +11,7 @@
 		"typeRoots": ["node_modules/@types", "src/@types"],
 		"baseUrl": "./src",
 		"paths": {
+			"@configs/*": ["configs/*"],
 			"@mock/*": ["mock/*"],
 			"@query/*": ["query/*"]
 		}
