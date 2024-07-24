@@ -12,7 +12,7 @@ const hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
 // console.log(`http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`);
 
 module.exports = class Marvel extends RESTDataSource {
-	baseURL = 'http://gateway.marvel.com/v1/public/';
+	baseURL = 'https://gateway.marvel.com/v1/public/';
 	params = {
 		ts,
 		apikey: PUBLIC_KEY,

@@ -103,19 +103,19 @@ module.exports = /* GraphQL */ `
 		"""
 		A resource list containing the creators associated with this comic
 		"""
-		creators: [GenericCollections]
+		creators: GenericCollections
 		"""
 		A resource list containing the characters which appear in this comic
 		"""
-		characters: [GenericCollections]
+		characters: GenericCollections
 		"""
 		A resource list containing the stories which appear in this comic
 		"""
-		stories: [GenericCollections]
+		stories: GenericCollections
 		"""
 		Uma lista de recursos contendo os eventos em que esta história em quadrinhos aparece
 		"""
-		events: [GenericCollections]
+		events: GenericCollections
 	}
 
 	type ComicDataContainer {
