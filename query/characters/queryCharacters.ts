@@ -1,63 +1,57 @@
 module.exports = `
-query GetComicsStories {
-	characters {
-		code
-		status
-		copyright
-		attributionText
-		attributionHTML
-		etag
-		data {
-			count
-			limit
-			offset
-			total
-			results {
-				id
-				name
-				description
-				modified
-				resourceURI
-				urls {
-					type
-					url
-				}
-				thumbnail {
-					path
-					extension
-				}
-				comics {
-					available
-					returned
-					collectionURI
-					items {
-						resourceURI
-						name
+	query GetCharacters {
+		characters {
+			code
+			status
+			copyright
+			etag
+			data {
+				count
+				limit
+				offset
+				total
+				results {
+					id
+					name
+					description
+					modified
+					resourceURI
+					urls {
+						type
+						url
 					}
-				}
-				stories {
-					available
-					returned
-					collectionURI
-					items {
-						resourceURI
-						name
+					thumbnail{
+						extension
+						path
 					}
-				}
-				events {
-					available
-					returned
-					collectionURI
-					items {
-						resourceURI
-						name
+					comics{
+						available
+						returned
+						collectionURI
+						items {
+							resourceURI
+							name
+						}
 					}
-				}
-				series {
-					available
-					returned
-					collectionURI
-					items {
+					stories {
+						available
+						returned
+						collectionURI
+						items {
+							resourceURI
+							name
+						}
+					}
+					events {
+						available
+						returned
+						collectionURI
+						items {
+							resourceURI
+							name
+						}
+					}
+					series {
 						resourceURI
 						name
 					}
@@ -65,5 +59,4 @@ query GetComicsStories {
 			}
 		}
 	}
-}
 `;

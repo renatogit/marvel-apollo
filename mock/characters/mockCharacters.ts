@@ -2,8 +2,6 @@ module.exports = {
 	code: 200,
 	status: 'mock data',
 	copyright: 'mock data',
-	attributionText: 'mock data',
-	attributionHTML: 'mock data',
 	etag: 'mock data',
 	data: {
 		count: 20,
@@ -28,8 +26,8 @@ module.exports = {
 					},
 				],
 				thumbnail: {
-					path: 'mock data',
 					extension: 'mock data',
+					path: 'mock data',
 				},
 				comics: {
 					available: 12,
@@ -73,19 +71,8 @@ module.exports = {
 					],
 				},
 				series: {
-					available: 3,
-					returned: 3,
-					collectionURI: 'mock data',
-					items: [
-						{
-							resourceURI: 'mock data',
-							name: 'mock data',
-						},
-						{
-							resourceURI: 'mock data',
-							name: 'mock data',
-						},
-					],
+					resourceURI: 'mock data',
+					name: 'mock data',
 				},
 			},
 			{
@@ -105,12 +92,12 @@ module.exports = {
 					},
 				],
 				thumbnail: {
-					path: 'mock data',
 					extension: 'mock data',
+					path: 'mock data',
 				},
 				comics: {
-					available: 4,
-					returned: 4,
+					available: 12,
+					returned: 12,
 					collectionURI: 'mock data',
 					items: [
 						{
@@ -124,8 +111,8 @@ module.exports = {
 					],
 				},
 				stories: {
-					available: 7,
-					returned: 7,
+					available: 21,
+					returned: 20,
 					collectionURI: 'mock data',
 					items: [
 						{
@@ -139,25 +126,19 @@ module.exports = {
 					],
 				},
 				events: {
-					available: 0,
-					returned: 0,
-					collectionURI: 'mock data',
-					items: [],
-				},
-				series: {
-					available: 2,
-					returned: 2,
+					available: 1,
+					returned: 1,
 					collectionURI: 'mock data',
 					items: [
 						{
 							resourceURI: 'mock data',
 							name: 'mock data',
 						},
-						{
-							resourceURI: 'mock data',
-							name: 'mock data',
-						},
 					],
+				},
+				series: {
+					resourceURI: 'mock data',
+					name: 'mock data',
 				},
 			},
 		],

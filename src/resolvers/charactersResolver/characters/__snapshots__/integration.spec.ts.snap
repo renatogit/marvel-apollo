@@ -6,8 +6,6 @@ exports[`resolvers/charactersResolver/integration fetches characters and generat
   "singleResult": {
     "data": {
       "characters": {
-        "attributionHTML": "mock data",
-        "attributionText": "mock data",
         "code": 200,
         "copyright": "mock data",
         "data": {
@@ -48,19 +46,8 @@ exports[`resolvers/charactersResolver/integration fetches characters and generat
               "name": "mock data",
               "resourceURI": "mock data",
               "series": {
-                "available": 3,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 3,
+                "name": "mock data",
+                "resourceURI": "mock data",
               },
               "stories": {
                 "available": 21,
@@ -94,7 +81,7 @@ exports[`resolvers/charactersResolver/integration fetches characters and generat
             },
             {
               "comics": {
-                "available": 4,
+                "available": 12,
                 "collectionURI": "mock data",
                 "items": [
                   {
@@ -106,36 +93,30 @@ exports[`resolvers/charactersResolver/integration fetches characters and generat
                     "resourceURI": "mock data",
                   },
                 ],
-                "returned": 4,
+                "returned": 12,
               },
               "description": "mock data",
               "events": {
-                "available": 0,
+                "available": 1,
                 "collectionURI": "mock data",
-                "items": [],
-                "returned": 0,
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 1,
               },
               "id": 1017100,
               "modified": "mock data",
               "name": "mock data",
               "resourceURI": "mock data",
               "series": {
-                "available": 2,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 2,
+                "name": "mock data",
+                "resourceURI": "mock data",
               },
               "stories": {
-                "available": 7,
+                "available": 21,
                 "collectionURI": "mock data",
                 "items": [
                   {
@@ -147,7 +128,7 @@ exports[`resolvers/charactersResolver/integration fetches characters and generat
                     "resourceURI": "mock data",
                   },
                 ],
-                "returned": 7,
+                "returned": 20,
               },
               "thumbnail": {
                 "extension": "mock data",

@@ -1,6 +1,6 @@
 module.exports = {
 	Query: {
-		characters: async (_, __, {dataSources}) => {
+		async characters(_, __, {dataSources}) {
 			try {
 				const data = await dataSources.characters.getCharacters();
 				return data;
