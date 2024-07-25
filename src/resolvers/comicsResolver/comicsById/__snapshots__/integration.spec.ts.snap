@@ -17,10 +17,19 @@ exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generat
           "results": [
             {
               "characters": {
-                "available": null,
-                "collectionURI": null,
-                "items": null,
-                "returned": null,
+                "available": 113,
+                "collectionURI": "12744",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 20,
               },
               "collectedIssues": [
                 {
@@ -36,10 +45,21 @@ exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generat
                 },
               ],
               "creators": {
-                "available": null,
-                "collectionURI": null,
-                "items": null,
-                "returned": null,
+                "available": 102,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                    "role": "mock data",
+                  },
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                    "role": "mock data",
+                  },
+                ],
+                "returned": 20,
               },
               "dates": [
                 {
@@ -56,10 +76,19 @@ exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generat
               "digitalId": 0,
               "ean": "mock data",
               "events": {
-                "available": null,
-                "collectionURI": null,
-                "items": null,
-                "returned": null,
+                "available": 113,
+                "collectionURI": "12744",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 20,
               },
               "format": "mock data",
               "id": 82967,
@@ -86,10 +115,19 @@ exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generat
                 "resourceURI": "mock data",
               },
               "stories": {
-                "available": null,
-                "collectionURI": null,
-                "items": null,
-                "returned": null,
+                "available": 161,
+                "collectionURI": "mock data",
+                "items": [
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                  {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                ],
+                "returned": 20,
               },
               "textObjects": [
                 {
