@@ -15,7 +15,7 @@ describe('consfigs/marvelAPI', () => {
 	});
 
 	it('should initialize with correct baseURL', () => {
-		expect(marvel.baseURL).toBe('http://gateway.marvel.com/v1/public/');
+		expect(marvel.baseURL).toBe('https://gateway.marvel.com/v1/public/');
 	});
 
 	it('should initialize with correct params', () => {
