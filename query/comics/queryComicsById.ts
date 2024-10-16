@@ -4,8 +4,6 @@ module.exports = `
 			code
 			status
 			copyright
-			attributionText
-			attributionHTML
 			etag
 			data {
 				count
@@ -16,91 +14,83 @@ module.exports = `
 					id
 					description
 					diamondCode
-					digitalId
-					ean
 					format
-					isbn
-					issn
 					issueNumber
 					modified
-					pageCount
-					resourceURI
-					title
-					upc
-					variantDescription
-					collections {
-						name
-						resourceURI
-						role
-					}
-					collectedIssues {
-						resourceURI
-						name
-					}
-					prices {
+					prices{
 						type
 						price
 					}
+					pageCount
+					title
+					upc
+					variantDescription
 					images {
-						path
 						extension
+						path
 					}
 					dates {
-						type
 						date
-					}
-					urls {
 						type
-						url
-					}
-					textObjects {
-						type
-						language
-						text
-					}
-					variants {
-						name
-						resourceURI
-					}
-					series {
-						resourceURI
-						name
-					}
-					creators {
-						available
-						returned
-						collectionURI
-						items {
-							name
-							resourceURI
-							role
-						}
 					}
 					characters {
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
-							name
-		 				}
-					}
-					stories {
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
-							name
+						id
+						name
+						urls {
+							type
+							url
 						}
+						thumbnail {
+							extension
+							path
+						}
+						description
+						modified
+					}
+					creators {
+						id
+						urls {
+							type
+							url
+						}
+						thumbnail {
+							extension
+							path
+						}
+						modified
+						suffix
+						fullName
 					}
 					events {
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
+						id
+						title
+						description
+						urls {
+							type
+							url
+						}
+						thumbnail {
+							extension
+							path
+						}
+						modified
+						start
+						end
+					}
+					stories {
+						id
+						title
+						description
+						type
+						modified
+						thumbnail {
+							extension
+							path
+						}
+
+						originalissue {
 							name
+							resourceURI
 						}
 					}
 				}

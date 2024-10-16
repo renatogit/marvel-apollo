@@ -97,25 +97,25 @@ module.exports = /* GraphQL */ `
 		"""
 		collectedIssues: [Uri]
 		"""
-		Uma representação resumida da série à qual esta história em quadrinhos pertence
+		A resource list containing the characters which appear in this comic
 		"""
-		series: GenericCollections
+		characters: [GenericComics]
 		"""
 		A resource list containing the creators associated with this comic
 		"""
-		creators: GenericCollections
-		"""
-		A resource list containing the characters which appear in this comic
-		"""
-		characters: GenericCollections
-		"""
-		A resource list containing the stories which appear in this comic
-		"""
-		stories: GenericCollections
+		creators: [GenericComics]
 		"""
 		Uma lista de recursos contendo os eventos em que esta história em quadrinhos aparece
 		"""
-		events: GenericCollections
+		events: [GenericComics]
+		"""
+		Uma representação resumida da série à qual esta história em quadrinhos pertence
+		"""
+		series: [GenericComics]
+		"""
+		A resource list containing the stories which appear in this comic
+		"""
+		stories: [GenericComics]
 	}
 
 	type ComicDataContainer {

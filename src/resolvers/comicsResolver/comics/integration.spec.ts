@@ -1,16 +1,21 @@
 const ComicsResolver = require('.');
 const DataSourcesComicsAPI = require('@/dataSources/comics');
-const ConfigServer = require('@/configs/test');
+const TestServer = require('@/configs/test');
 const QUERY_GET_COMICS = require('@query/comics/queryComics');
 const MOCK_GET_COMICS = require('@mock/comics/mockComics');
 
 describe('resolvers/comicsResolver/integration', () => {
 	it('fetches comics and generate snapshots', async () => {
-		const {server} = await ConfigServer(
-			DataSourcesComicsAPI,
-			ComicsResolver,
-			MOCK_GET_COMICS
-		);
+		const args = {
+			dataSources: DataSourcesComicsAPI,
+			resolver: ComicsResolver.Query.comics,
+			mock: MOCK_GET_COMICS,
+			variables: null,
+			entity: 'comics',
+			typeQuery: 'comics',
+		};
+
+		const {server} = await TestServer(args);
 
 		const {body} = await server.executeOperation({
 			query: QUERY_GET_COMICS,

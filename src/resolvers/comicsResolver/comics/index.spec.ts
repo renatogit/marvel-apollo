@@ -3,36 +3,36 @@ const ComicsResolver = require('.');
 const ServerGetComics = require('@/configs/test');
 const QUERY_GET_COMICS = require('@query/comics/queryComics');
 const MOCK_GET_COMICS = require('@mock/comics/mockComics');
+const {testRequestError} = require('@utils/test');
 
 describe('resolvers/comicsResolver/comics', () => {
 	it('should return the comics entity data', async () => {
-		const {server, mockResponse} = await ServerGetComics(
-			DataSourcesComicsAPI,
-			ComicsResolver,
-			MOCK_GET_COMICS
-		);
+		const args = {
+			dataSources: DataSourcesComicsAPI,
+			resolver: ComicsResolver.Query.comics,
+			mock: MOCK_GET_COMICS,
+			variables: null,
+			entity: 'comics',
+			typeQuery: 'comics',
+		};
+
+		const {server, mockResponse} = await ServerGetComics(args);
 
 		const {body} = await server.executeOperation({
 			query: QUERY_GET_COMICS,
 		});
 
 		expect(body.singleResult.errors).toBeUndefined();
-		expect(body.singleResult.data).toEqual({comics: mockResponse});
+		expect(body.singleResult.data.comics).toEqual(mockResponse);
 	});
 
-	it('should return request error', async () => {
-		const errorMessage = 'mockError: Failed to fetch comics';
-
-		const error = async () =>
-			await ComicsResolver.Query.comics(null, null, {
-				dataSources: {
-					comics: {
-						getComics: () =>
-							Promise.reject(new Error(errorMessage)),
-					},
-				},
-			});
-
-		await expect(error).rejects.toThrow(errorMessage);
+	it('should return a comics request catch error', async () => {
+		testRequestError(
+			'mockError: Failed to fetch comics',
+			ComicsResolver.Query.comics,
+			null,
+			'comics',
+			'getComics'
+		);
 	});
 });

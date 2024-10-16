@@ -16,21 +16,6 @@ exports[`resolvers/comicsResolver/integration fetches comics and generate snapsh
           "offset": 0,
           "results": [
             {
-              "characters": {
-                "available": 113,
-                "collectionURI": "12744",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
               "collectedIssues": [
                 {
                   "name": "mock data",
@@ -44,23 +29,6 @@ exports[`resolvers/comicsResolver/integration fetches comics and generate snapsh
                   "role": "mock data",
                 },
               ],
-              "creators": {
-                "available": 102,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                    "role": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                    "role": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
               "dates": [
                 {
                   "date": "mock data",
@@ -75,21 +43,6 @@ exports[`resolvers/comicsResolver/integration fetches comics and generate snapsh
               "diamondCode": "mock data",
               "digitalId": 0,
               "ean": "mock data",
-              "events": {
-                "available": 113,
-                "collectionURI": "12744",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
               "format": "mock data",
               "id": 82967,
               "images": [
@@ -110,25 +63,6 @@ exports[`resolvers/comicsResolver/integration fetches comics and generate snapsh
                 },
               ],
               "resourceURI": "mock data",
-              "series": {
-                "name": "mock data",
-                "resourceURI": "mock data",
-              },
-              "stories": {
-                "available": 161,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
               "textObjects": [
                 {
                   "language": "mock data",
@@ -157,21 +91,6 @@ exports[`resolvers/comicsResolver/integration fetches comics and generate snapsh
               ],
             },
             {
-              "characters": {
-                "available": 113,
-                "collectionURI": "12744",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
               "collectedIssues": [
                 {
                   "name": "mock data",
@@ -185,23 +104,6 @@ exports[`resolvers/comicsResolver/integration fetches comics and generate snapsh
                   "role": "mock data",
                 },
               ],
-              "creators": {
-                "available": 102,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                    "role": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                    "role": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
               "dates": [
                 {
                   "date": "mock data",
@@ -216,17 +118,6 @@ exports[`resolvers/comicsResolver/integration fetches comics and generate snapsh
               "diamondCode": "mock data",
               "digitalId": 0,
               "ean": "mock data",
-              "events": {
-                "available": 89.3,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 89.3,
-              },
               "format": "mock data",
               "id": 82965,
               "images": [
@@ -247,25 +138,6 @@ exports[`resolvers/comicsResolver/integration fetches comics and generate snapsh
                 },
               ],
               "resourceURI": "mock data",
-              "series": {
-                "name": "mock data",
-                "resourceURI": "mock data",
-              },
-              "stories": {
-                "available": 161,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
               "textObjects": [],
               "title": "mock data",
               "upc": "mock data",

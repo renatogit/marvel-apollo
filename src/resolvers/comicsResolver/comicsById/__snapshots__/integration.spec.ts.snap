@@ -6,8 +6,6 @@ exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generat
   "singleResult": {
     "data": {
       "comicsById": {
-        "attributionHTML": "mock data",
-        "attributionText": "mock data",
         "code": 200,
         "copyright": "mock data",
         "data": {
@@ -16,51 +14,42 @@ exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generat
           "offset": 0,
           "results": [
             {
-              "characters": {
-                "available": 113,
-                "collectionURI": "12744",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
-              "collectedIssues": [
+              "characters": [
                 {
-                  "name": "mock data",
-                  "resourceURI": "mock data",
+                  "description": "mock id",
+                  "id": 1,
+                  "modified": "mock id",
+                  "name": "mock id",
+                  "thumbnail": {
+                    "extension": "mock id",
+                    "path": "mock id",
+                  },
+                  "urls": [
+                    {
+                      "type": "mock id",
+                      "url": "mock id",
+                    },
+                  ],
                 },
               ],
-              "collections": [
+              "creators": [
                 {
-                  "name": "mock data",
-                  "resourceURI": "mock data",
-                  "role": "mock data",
+                  "fullName": "mock id",
+                  "id": 1,
+                  "modified": "mock id",
+                  "suffix": "mock data",
+                  "thumbnail": {
+                    "extension": "mock id",
+                    "path": "mock id",
+                  },
+                  "urls": [
+                    {
+                      "type": "mock id",
+                      "url": "mock id",
+                    },
+                  ],
                 },
               ],
-              "creators": {
-                "available": 102,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                    "role": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                    "role": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
               "dates": [
                 {
                   "date": "mock data",
@@ -73,23 +62,26 @@ exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generat
               ],
               "description": "mock data",
               "diamondCode": "mock data",
-              "digitalId": 0,
-              "ean": "mock data",
-              "events": {
-                "available": 113,
-                "collectionURI": "12744",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
+              "events": [
+                {
+                  "description": "mock id",
+                  "end": "mock id",
+                  "id": 1,
+                  "modified": "mock id",
+                  "start": "mock id",
+                  "thumbnail": {
+                    "extension": "mock id",
+                    "path": "mock id",
                   },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
+                  "title": "mock id",
+                  "urls": [
+                    {
+                      "type": "mock id",
+                      "url": "mock id",
+                    },
+                  ],
+                },
+              ],
               "format": "mock data",
               "id": 82967,
               "images": [
@@ -98,8 +90,6 @@ exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generat
                   "path": "mock data",
                 },
               ],
-              "isbn": "mock data",
-              "issn": "mock data",
               "issueNumber": 0,
               "modified": "mock data",
               "pageCount": 112,
@@ -109,52 +99,26 @@ exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generat
                   "type": "mock data",
                 },
               ],
-              "resourceURI": "mock data",
-              "series": {
-                "name": "mock data",
-                "resourceURI": "mock data",
-              },
-              "stories": {
-                "available": 161,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
-              "textObjects": [
+              "stories": [
                 {
-                  "language": "mock data",
-                  "text": "mock data",
+                  "description": "mock data",
+                  "id": 1,
+                  "modified": "mock data",
+                  "originalissue": {
+                    "name": "mock data",
+                    "resourceURI": "mock data",
+                  },
+                  "thumbnail": {
+                    "extension": "mock data",
+                    "path": "mock data",
+                  },
+                  "title": "mock data",
                   "type": "mock data",
                 },
               ],
               "title": "mock data",
               "upc": "mock data",
-              "urls": [
-                {
-                  "type": "mock data",
-                  "url": "mock data",
-                },
-              ],
               "variantDescription": "mock data",
-              "variants": [
-                {
-                  "name": "mock data",
-                  "resourceURI": "mock data",
-                },
-                {
-                  "name": "mock data",
-                  "resourceURI": "mock data",
-                },
-              ],
             },
           ],
           "total": 60599,

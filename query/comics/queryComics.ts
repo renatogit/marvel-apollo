@@ -62,47 +62,6 @@ module.exports = `
 						name
 						resourceURI
 					}
-					series {
-						resourceURI
-						name
-					}
-					creators {
-						available
-						returned
-						collectionURI
-						items {
-							name
-							resourceURI
-							role
-						}
-					}
-					characters {
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
-							name
-		 				}
-					}
-					stories {
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
-							name
-						}
-					}
-					events {
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
-							name
-						}
-					}
 				}
 			}
 		}

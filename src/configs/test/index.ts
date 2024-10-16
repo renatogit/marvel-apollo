@@ -3,14 +3,18 @@ const {join} = require('path');
 const {loadFilesSync: loadFiles} = require('@graphql-tools/load-files');
 const {mergeTypeDefs: mergeTypeTest} = require('@graphql-tools/merge');
 
-module.exports = async (dataSources, resolver, mock, params) => {
+module.exports = async ({
+	dataSources,
+	resolver,
+	mock,
+	variables,
+	entity,
+	typeQuery,
+}: any) => {
 	const instanceDataSourcesAPI = new dataSources();
 	instanceDataSourcesAPI.get = jest.fn(() => mock);
 
-	const method = Object.keys(resolver.Query)[0];
-	const entity = method.replace(/([a-z](?=[A-Z]))/g, '$1 ').split(' ')[0];
-
-	const mockResponse = await resolver.Query[method]({}, params, {
+	const mockResponse = await resolver({}, variables, {
 		dataSources: {[entity]: instanceDataSourcesAPI},
 	});
 
@@ -22,7 +26,7 @@ module.exports = async (dataSources, resolver, mock, params) => {
 		typeDefs: mergeTypeTest(schemaFiles),
 		resolvers: {
 			Query: {
-				[method]: () => mockResponse,
+				[typeQuery]: () => mockResponse,
 			},
 		},
 	});

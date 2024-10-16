@@ -1,6 +1,10 @@
 module.exports = {
 	Query: {
-		async comics(_, __, {dataSources}) {
+		async comics(
+			_: any,
+			__: any,
+			{dataSources}: any
+		): Promise<IResponse<IComics>> {
 			try {
 				const data = await dataSources.comics.getComics();
 				return data;
@@ -9,6 +13,6 @@ module.exports = {
 					`ERROR: Failed to fetch comics: ${error.message}`
 				);
 			}
-		}
+		},
 	},
 };

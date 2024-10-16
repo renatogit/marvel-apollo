@@ -44,4 +44,44 @@ module.exports = /* GraphQL */ `
 		name: String
 		resourceURI: String
 	}
+
+	type OriginalIssue {
+		name: String
+		resourceURI: String
+	}
+
+	type GenericComics {
+		id: Float
+		title: String
+		urls: [Url]
+		thumbnail: Image
+		description: String
+		modified: String
+	}
+
+	# Entidade Characters
+	extend type GenericComics {
+		name: String
+	}
+
+	# Entidade Creator
+	extend type GenericComics {
+		suffix: String
+		fullName: String
+		# TODO verificar se deve fazer chamada de series
+		series: GenericCollections
+	}
+
+	# Entidade Event
+	extend type GenericComics {
+		urls: [Url]
+		start: String
+		end: String
+	}
+
+	# Entidade Story
+	extend type GenericComics {
+		type: String
+		originalissue: Uri
+	}
 `;
