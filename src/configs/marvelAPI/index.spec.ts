@@ -1,4 +1,4 @@
-const MarvelTest = require('.'); // Adjust the path based on your project structure
+const MarvelTest = require('.');
 
 const paramsMarvelApi = {
 	ts: 'fake',

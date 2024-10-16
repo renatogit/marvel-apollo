@@ -1,1 +1,8 @@
-[comics](http://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash})
+# Marvel Apollo
+
+## Start project
+
+```bash
+npm start
+```
+http://localhost:4000

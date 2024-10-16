@@ -1,38 +1,62 @@
-interface Url {
+interface IResponse<T> {
+	code: number;
+	status: string;
+	data: IResponseData<T>;
+	attributionText: string;
+}
+
+interface IResponseData<T> {
+	offset: number;
+	limit: number;
+	total: number;
+	count: number;
+	results: T[];
+}
+
+interface IDataSources {
+	comics: IComicsDataSources;
+}
+
+interface IUrl {
 	type: string;
 	url: string;
 }
 
-interface Image {
+interface IImage {
 	path: string;
 	extension: string;
 }
 
-interface Uri {
+interface IUri {
 	name: string;
 	resourceURI: string;
 	role: string;
 }
 
-interface TextObjects {
+interface ITextObjects {
 	type: string;
 	text: string;
 	language: string;
 }
 
-interface Dates {
+interface IDates {
 	type: string;
 	date: string;
 }
 
-interface Price {
+interface IPrice {
 	type: string;
 	price: number;
 }
 
-interface GenericCollections {
+interface IGenericCollections {
 	available: number;
 	collectionURI: string;
-	items: Uri[];
+	items: IUri[];
 	returned: number;
+}
+
+interface ID {
+	comicsId: string;
+	charactersId: string;
 }
