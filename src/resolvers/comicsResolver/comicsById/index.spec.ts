@@ -7,19 +7,10 @@ const QUERY_GET_COMICS_CHARACTERS = require('@query/comics/queryComicsCharacters
 const QUERY_GET_COMICS_CREATORS = require('@query/comics/queryComicsCreators');
 const QUERY_GET_COMICS_EVENTS = require('@query/comics/queryComicsEvents');
 const QUERY_GET_COMICS_STORIES = require('@query/comics/queryComicsStories');
-const {testRequestError, testPromiseError} = require('@utils/test');
+const testRequestError = require('@utils/testRequestError');
 
 describe('resolvers/comicsResolver', () => {
-	const comicsId = {comicsId: 'fake-code'};
-
-	const mockDataSources = {
-		comics: {
-			getComicsCharacters: jest.fn(),
-			getComicsCreators: jest.fn(),
-			getComicsEvents: jest.fn(),
-			getComicsStories: jest.fn(),
-		},
-	};
+	const variables = {comicsId: 'fake-code'};
 
 	describe('comicsById', () => {
 		it('should return the comicsById entity data', async () => {
@@ -27,7 +18,7 @@ describe('resolvers/comicsResolver', () => {
 				dataSources: DataSourcesComicsByIdAPI,
 				resolver: ComicsByIdResolver.Query.comicsById,
 				mock: MOCK_GET_COMICS_BY_ID,
-				variables: {comicsId},
+				variables,
 				entity: 'comics',
 				typeQuery: 'comicsById',
 			};
@@ -36,21 +27,18 @@ describe('resolvers/comicsResolver', () => {
 
 			const {body} = await server.executeOperation({
 				query: QUERY_GET_COMICS_BY_ID,
-				variables: comicsId,
+				variables,
 			});
 
 			expect(body.singleResult.errors).toBeUndefined();
 			expect(body.singleResult.data.comicsById).toEqual(mockResponse);
 		});
 
-		it('should return a comicsById request catch error', () => {
-			testRequestError(
-				'mockError: Failed to fetch comicsById',
-				ComicsByIdResolver.Query.comicsById,
-				comicsId,
-				'comics',
-				'getComicsById'
-			);
+		it('should return a comicsById request error', () => {
+			testRequestError(ComicsByIdResolver.Query.comicsById, variables, {
+				entity: 'comics',
+				method: 'getComicsById',
+			});
 		});
 	});
 
@@ -66,7 +54,7 @@ describe('resolvers/comicsResolver', () => {
 				dataSources: DataSourcesComicsByIdAPI,
 				resolver: ComicsByIdResolver.Comic.characters,
 				mock: COMICS_CHARACTERS[0],
-				variables: {comicsId},
+				variables,
 				entity: 'comics',
 				typeQuery: 'comicsCharacters',
 			};
@@ -75,7 +63,7 @@ describe('resolvers/comicsResolver', () => {
 
 			const {body} = await server.executeOperation({
 				query: QUERY_GET_COMICS_CHARACTERS,
-				variables: comicsId,
+				variables,
 			});
 
 			expect(body.singleResult.errors).toBeUndefined();
@@ -84,14 +72,11 @@ describe('resolvers/comicsResolver', () => {
 			);
 		});
 
-		it('should return a ComicsCharacters request catch error ', () => {
-			testPromiseError(
-				mockDataSources,
-				'comics',
-				'getComicsCharacters',
-				comicsId,
-				ComicsByIdResolver.Comic.characters
-			);
+		it('should return a ComicsCharacters request error ', () => {
+			testRequestError(ComicsByIdResolver.Comic.characters, variables, {
+				entity: 'comics',
+				method: 'getComicsCharacters',
+			});
 		});
 	});
 
@@ -107,7 +92,7 @@ describe('resolvers/comicsResolver', () => {
 				dataSources: DataSourcesComicsByIdAPI,
 				resolver: ComicsByIdResolver.Comic.creators,
 				mock: COMICS_CREATORS[0],
-				variables: {comicsId},
+				variables,
 				entity: 'comics',
 				typeQuery: 'comicsCreators',
 			};
@@ -116,21 +101,18 @@ describe('resolvers/comicsResolver', () => {
 
 			const {body} = await server.executeOperation({
 				query: QUERY_GET_COMICS_CREATORS,
-				variables: comicsId,
+				variables,
 			});
 
 			expect(body.singleResult.errors).toBeUndefined();
 			expect(body.singleResult.data.comicsCreators).toEqual(mockResponse);
 		});
 
-		it('should return a ComicsCreators request catch error', () => {
-			testPromiseError(
-				mockDataSources,
-				'comics',
-				'getComicsCreators',
-				comicsId,
-				ComicsByIdResolver.Comic.creators
-			);
+		it('should return a ComicsCreators request error', () => {
+			testRequestError(ComicsByIdResolver.Comic.creators, variables, {
+				entity: 'comics',
+				method: 'getComicsCreators',
+			});
 		});
 	});
 
@@ -146,7 +128,7 @@ describe('resolvers/comicsResolver', () => {
 				dataSources: DataSourcesComicsByIdAPI,
 				resolver: ComicsByIdResolver.Comic.events,
 				mock: COMICS_EVENTS[0],
-				variables: {comicsId},
+				variables,
 				entity: 'comics',
 				typeQuery: 'comicsEvents',
 			};
@@ -155,21 +137,18 @@ describe('resolvers/comicsResolver', () => {
 
 			const {body} = await server.executeOperation({
 				query: QUERY_GET_COMICS_EVENTS,
-				variables: comicsId,
+				variables,
 			});
 
 			expect(body.singleResult.errors).toBeUndefined();
 			expect(body.singleResult.data.comicsEvents).toEqual(mockResponse);
 		});
 
-		it('should return a ComicsEvents request catch error', () => {
-			testPromiseError(
-				mockDataSources,
-				'comics',
-				'getComicsEvents',
-				comicsId,
-				ComicsByIdResolver.Comic.events
-			);
+		it('should return a ComicsEvents request error', () => {
+			testRequestError(ComicsByIdResolver.Comic.events, variables, {
+				entity: 'comics',
+				method: 'getComicsEvents',
+			});
 		});
 	});
 
@@ -185,7 +164,7 @@ describe('resolvers/comicsResolver', () => {
 				dataSources: DataSourcesComicsByIdAPI,
 				resolver: ComicsByIdResolver.Comic.stories,
 				mock: COMICS_STORIES[0],
-				variables: {comicsId},
+				variables,
 				entity: 'comics',
 				typeQuery: 'comicsStories',
 			};
@@ -194,21 +173,18 @@ describe('resolvers/comicsResolver', () => {
 
 			const {body} = await server.executeOperation({
 				query: QUERY_GET_COMICS_STORIES,
-				variables: comicsId,
+				variables,
 			});
 
 			expect(body.singleResult.errors).toBeUndefined();
 			expect(body.singleResult.data.comicsStories).toEqual(mockResponse);
 		});
 
-		it('should return a ComicsEvents request catch error', () => {
-			testPromiseError(
-				mockDataSources,
-				'comics',
-				'getComicsStories',
-				comicsId,
-				ComicsByIdResolver.Comic.stories
-			);
+		it('should return a ComicsEvents request error', () => {
+			testRequestError(ComicsByIdResolver.Comic.stories, variables, {
+				entity: 'comics',
+				method: 'getComicsStories',
+			});
 		});
 	});
 });

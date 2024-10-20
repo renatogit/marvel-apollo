@@ -3,7 +3,7 @@ const ComicsResolver = require('.');
 const ServerGetComics = require('@/configs/test');
 const QUERY_GET_COMICS = require('@query/comics/queryComics');
 const MOCK_GET_COMICS = require('@mock/comics/mockComics');
-const {testRequestError} = require('@utils/test');
+const testRequestError = require('@utils/testRequestError');
 
 describe('resolvers/comicsResolver/comics', () => {
 	it('should return the comics entity data', async () => {
@@ -27,12 +27,9 @@ describe('resolvers/comicsResolver/comics', () => {
 	});
 
 	it('should return a comics request catch error', async () => {
-		testRequestError(
-			'mockError: Failed to fetch comics',
-			ComicsResolver.Query.comics,
-			null,
-			'comics',
-			'getComics'
-		);
+		testRequestError(ComicsResolver.Query.comics, {}, {
+			entity: 'comics',
+			method: 'getComics',
+		});
 	});
 });

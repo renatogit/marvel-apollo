@@ -39,33 +39,33 @@ module.exports = /* GraphQL */ `
 		items: [Uri]
 	}
 
-	# Entidade Comics
 	extend type GenericCollections {
 		name: String
 		resourceURI: String
 	}
 
-	type OriginalIssue {
-		name: String
-		resourceURI: String
-	}
-
-	type GenericComics {
+	# Entidade Comics
+	type GenericEntity {
 		id: Float
 		title: String
 		urls: [Url]
 		thumbnail: Image
 		description: String
 		modified: String
+		pageCount: Float
+		collections: [GenericCollections]
+		dates: [Dates]
+		prices: [Price]
+		images: [Image]
 	}
 
 	# Entidade Characters
-	extend type GenericComics {
+	extend type GenericEntity {
 		name: String
 	}
 
 	# Entidade Creator
-	extend type GenericComics {
+	extend type GenericEntity {
 		suffix: String
 		fullName: String
 		# TODO verificar se deve fazer chamada de series
@@ -73,15 +73,22 @@ module.exports = /* GraphQL */ `
 	}
 
 	# Entidade Event
-	extend type GenericComics {
+	extend type GenericEntity {
 		urls: [Url]
 		start: String
 		end: String
 	}
 
 	# Entidade Story
-	extend type GenericComics {
+	extend type GenericEntity {
 		type: String
 		originalissue: Uri
+	}
+
+	# Entidade Series
+	extend type GenericEntity {
+		startYear: Float
+		endYear: Float
+		rating: String
 	}
 `;

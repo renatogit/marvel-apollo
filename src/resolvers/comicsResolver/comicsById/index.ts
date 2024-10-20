@@ -1,6 +1,6 @@
 module.exports = {
 	Query: {
-		async comicsById(_: IComics, {comicsId}: ID, {dataSources}: any) {
+		async comicsById(_: IComics, {comicsId}: IID, {dataSources}: any) {
 			try {
 				const data = await dataSources.comics.getComicsById(comicsId);
 
