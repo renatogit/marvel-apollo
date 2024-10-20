@@ -14,122 +14,14 @@ exports[`resolvers/charactersResolver/integration fetches characters and generat
           "offset": 0,
           "results": [
             {
-              "comics": {
-                "available": 12,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 12,
-              },
+              "comics": null,
               "description": "mock data",
-              "events": {
-                "available": 1,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 1,
-              },
+              "events": null,
               "id": 1011334,
               "modified": "mock data",
               "name": "mock data",
-              "resourceURI": "mock data",
-              "series": {
-                "name": "mock data",
-                "resourceURI": "mock data",
-              },
-              "stories": {
-                "available": 21,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
-              "thumbnail": {
-                "extension": "mock data",
-                "path": "mock data",
-              },
-              "urls": [
-                {
-                  "type": "mock data",
-                  "url": "mock data",
-                },
-                {
-                  "type": "mock data",
-                  "url": "mock data",
-                },
-              ],
-            },
-            {
-              "comics": {
-                "available": 12,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 12,
-              },
-              "description": "mock data",
-              "events": {
-                "available": 1,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 1,
-              },
-              "id": 1017100,
-              "modified": "mock data",
-              "name": "mock data",
-              "resourceURI": "mock data",
-              "series": {
-                "name": "mock data",
-                "resourceURI": "mock data",
-              },
-              "stories": {
-                "available": 21,
-                "collectionURI": "mock data",
-                "items": [
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                  {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
-                ],
-                "returned": 20,
-              },
+              "series": null,
+              "stories": null,
               "thumbnail": {
                 "extension": "mock data",
                 "path": "mock data",

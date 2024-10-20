@@ -15,7 +15,6 @@ module.exports = `
 					name
 					description
 					modified
-					resourceURI
 					urls {
 						type
 						url
@@ -23,37 +22,6 @@ module.exports = `
 					thumbnail{
 						extension
 						path
-					}
-					comics{
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
-							name
-						}
-					}
-					stories {
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
-							name
-						}
-					}
-					events {
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
-							name
-						}
-					}
-					series {
-						resourceURI
-						name
 					}
 				}
 			}

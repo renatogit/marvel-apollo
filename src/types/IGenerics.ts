@@ -56,7 +56,7 @@ interface IGenericCollections {
 	returned: number;
 }
 
-interface ID {
+interface IID {
 	comicsId: string;
 	charactersId: string;
 }

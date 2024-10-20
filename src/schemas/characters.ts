@@ -17,10 +17,6 @@ module.exports = /* GraphQL */ `
 		"""
 		modified: String
 		"""
-		O identificador de URL canônico para este recurso
-		"""
-		resourceURI: String
-		"""
 		Um conjunto de URLs de sites públicos para o recurso
 		"""
 		urls: [Url]
@@ -31,19 +27,19 @@ module.exports = /* GraphQL */ `
 		"""
 		Uma lista de recursos contendo quadrinhos que apresentam esse personagem
 		"""
-		comics: GenericCollections
+		comics: [GenericEntity]
 		"""
 		Uma lista de recursos de histórias nas quais esse personagem aparece
 		"""
-		stories:GenericCollections
+		stories:[GenericEntity]
 		"""
 		Uma lista de recursos de eventos em que este personagem aparece
 		"""
-		events: GenericCollections
+		events: [GenericEntity]
 		"""
 		Uma lista de recursos de séries em que esse personagem aparece.
 		"""
-		series:GenericCollections
+		series: [GenericEntity]
 	}
 
 	type CharacterDataContainer {

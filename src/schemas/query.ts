@@ -9,6 +9,9 @@ module.exports = /* GraphQL */ `
 
 		characters: CharacterDataWrapper
 		charactersById(charactersId: ID!): CharacterDataWrapper
-		charactersComics(charactersId: ID!): CharacterDataWrapper
+		charactersComics(charactersId: ID!): [GenericEntity]
+		charactersEvents(charactersId: ID!): [GenericEntity]
+		charactersSeries(charactersId: ID!): [GenericEntity]
+		charactersStories(charactersId: ID!): [GenericEntity]
 	}
 `;

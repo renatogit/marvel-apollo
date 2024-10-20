@@ -15,7 +15,6 @@ module.exports = `
 					name
 					description
 					modified
-					resourceURI
 					urls {
 						type
 						url
@@ -25,35 +24,81 @@ module.exports = `
 						path
 					}
 					comics{
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
+						id
+						title
+						urls {
+							type
+							url
+						}
+						thumbnail{
+							extension
+							path
+						}
+						description
+						modified
+						pageCount
+						collections{
 							name
 						}
-					}
-					stories {
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
-							name
+						dates{
+							type
+							date
+						}
+						prices{
+							type
+							price
+						}
+						images{
+							path
+							extension
 						}
 					}
 					events {
-						available
-						returned
-						collectionURI
-						items {
-							resourceURI
-							name
+						id
+						title
+						description
+						urls {
+							type
+							url
+						}
+						modified
+						start
+						end
+						thumbnail{
+							extension
+							path
 						}
 					}
 					series {
-						resourceURI
-						name
+						id
+						title
+						description
+						urls {
+							type
+							url
+						}
+						startYear
+						endYear
+						rating
+						modified
+						thumbnail{
+							extension
+							path
+						}
+					}
+					stories {
+						id
+						title
+						description
+						type
+						modified
+						thumbnail{
+							extension
+							path
+						}
+						originalissue{
+							name
+						}
 					}
 				}
 			}

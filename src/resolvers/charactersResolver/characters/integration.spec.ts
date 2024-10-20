@@ -6,11 +6,16 @@ const MOCK_GET_CHARACTERS = require('@mock/characters/mockCharacters');
 
 describe('resolvers/charactersResolver/integration', () => {
 	it('fetches characters and generate snapshots', async () => {
-		const {server} = await ConfigServer(
-			DataSourcesCharactersAPI,
-			CharactersResolver,
-			MOCK_GET_CHARACTERS
-		);
+		const args = {
+			dataSources: DataSourcesCharactersAPI,
+			resolver: CharactersResolver.Query.characters,
+			mock: MOCK_GET_CHARACTERS,
+			variables: null,
+			entity: 'characters',
+			typeQuery: 'characters',
+		};
+
+		const {server} = await ConfigServer(args);
 
 		const {body} = await server.executeOperation({
 			query: QUERY_GET_CHARACTERS,

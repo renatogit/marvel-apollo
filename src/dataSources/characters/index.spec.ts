@@ -40,34 +40,34 @@ describe('dataSources/characters', () => {
 		);
 	});
 
-	it('should fetch comics for a characters', async () => {
-		characters.getCharactersComics('456');
+	it('should fetch characters for a comics', async () => {
+		characters.getCharactersComics('123');
 		expect(characters.get).toHaveBeenCalledWith(
-			'characters/456/comics',
+			'characters/123/comics',
 			paramsCharactersApi
 		);
 	});
 
-	it('should fetch events for a comic', async () => {
-		characters.getCharactersEvents('987');
+	it('should fetch characters for a events', async () => {
+		characters.getCharactersEvents('123');
 		expect(characters.get).toHaveBeenCalledWith(
-			'characters/987/events',
+			'characters/123/events',
 			paramsCharactersApi
 		);
 	});
 
-	it('should fetch series for a characters', async () => {
-		characters.getCharactersSeries('789');
+	it('should fetch characters for a series', async () => {
+		characters.getCharactersSeries('123');
 		expect(characters.get).toHaveBeenCalledWith(
-			'characters/789/series',
+			'characters/123/series',
 			paramsCharactersApi
 		);
 	});
 
-	it('should fetch stories for a comic', async () => {
-		characters.getCharactersStories('987');
+	it('should fetch characters for a stories', async () => {
+		characters.getCharactersStories('123');
 		expect(characters.get).toHaveBeenCalledWith(
-			'characters/987/stories',
+			'characters/123/stories',
 			paramsCharactersApi
 		);
 	});
