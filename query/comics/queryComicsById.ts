@@ -87,11 +87,6 @@ module.exports = `
 							extension
 							path
 						}
-
-						originalissue {
-							name
-							resourceURI
-						}
 					}
 				}
 			}
