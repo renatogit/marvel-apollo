@@ -13,8 +13,12 @@ interface IResponseData<T> {
 	results: T[];
 }
 
-interface IDataSources {
-	comics: IComicsDataSources;
+interface IDataSources<T> {
+	dataSources: T;
+}
+
+interface IEntity<T> {
+	[key: string]: T;
 }
 
 interface IUrl {
@@ -47,13 +51,6 @@ interface IDates {
 interface IPrice {
 	type: string;
 	price: number;
-}
-
-interface IGenericCollections {
-	available: number;
-	collectionURI: string;
-	items: IUri[];
-	returned: number;
 }
 
 interface IID {
