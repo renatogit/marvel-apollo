@@ -48,10 +48,6 @@ module.exports = /* GraphQL */ `
 		Uma lista de criadores que trabalharam nesta história
 		"""
 		creators: GenericCollections
-		"""
-		Uma representação resumida da edição na qual esta história foi originalmente publicada.
-		"""
-		originalissue: Uri
 	}
 
 	type StoryDataContainer {

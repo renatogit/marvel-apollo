@@ -104,10 +104,6 @@ exports[`resolvers/comicsByIdResolver/integration fetches comicsById and generat
                   "description": "mock data",
                   "id": 1,
                   "modified": "mock data",
-                  "originalissue": {
-                    "name": "mock data",
-                    "resourceURI": "mock data",
-                  },
                   "thumbnail": {
                     "extension": "mock data",
                     "path": "mock data",

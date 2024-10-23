@@ -27,9 +27,13 @@ describe('resolvers/comicsResolver/comics', () => {
 	});
 
 	it('should return a comics request catch error', async () => {
-		testRequestError(ComicsResolver.Query.comics, {}, {
-			entity: 'comics',
-			method: 'getComics',
-		});
+		testRequestError(
+			ComicsResolver.Query.comics,
+			{},
+			{
+				entity: 'comics',
+				method: 'getComics',
+			}
+		);
 	});
 });

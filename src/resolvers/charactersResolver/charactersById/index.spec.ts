@@ -49,9 +49,11 @@ describe('resolvers/charactersResolver/charactersById', () => {
 	describe('Characters.comics', () => {
 		it('should return the comics of charactersById ', async () => {
 			const CHARACTERS_COMICS =
-				MOCK_GET_CHARACTERS_BY_ID.data.results.map(({comics}: any) => ({
-					data: {results: comics},
-				}));
+				MOCK_GET_CHARACTERS_BY_ID.data.results.map(
+					({comics}: IEntity<ICharacters>) => ({
+						data: {results: comics},
+					})
+				);
 
 			const args = {
 				dataSources: DataSourcesCharactersAPI,
@@ -90,9 +92,11 @@ describe('resolvers/charactersResolver/charactersById', () => {
 	describe('Characters.events', () => {
 		it('should return the events of charactersById ', async () => {
 			const CHARACTERS_EVENTS =
-				MOCK_GET_CHARACTERS_BY_ID.data.results.map(({events}: any) => ({
-					data: {results: events},
-				}));
+				MOCK_GET_CHARACTERS_BY_ID.data.results.map(
+					({events}: ICharacters) => ({
+						data: {results: events},
+					})
+				);
 
 			const args = {
 				dataSources: DataSourcesCharactersAPI,
@@ -131,9 +135,11 @@ describe('resolvers/charactersResolver/charactersById', () => {
 	describe('Characters.series', () => {
 		it('should return the series of charactersById ', async () => {
 			const CHARACTERS_SERIES =
-				MOCK_GET_CHARACTERS_BY_ID.data.results.map(({series}: any) => ({
-					data: {results: series},
-				}));
+				MOCK_GET_CHARACTERS_BY_ID.data.results.map(
+					({series}: ICharacters) => ({
+						data: {results: series},
+					})
+				);
 
 			const args = {
 				dataSources: DataSourcesCharactersAPI,
@@ -173,7 +179,7 @@ describe('resolvers/charactersResolver/charactersById', () => {
 		it('should return the stories of charactersById ', async () => {
 			const CHARACTERS_STORIES =
 				MOCK_GET_CHARACTERS_BY_ID.data.results.map(
-					({stories}: any) => ({
+					({stories}: ICharacters) => ({
 						data: {results: stories},
 					})
 				);

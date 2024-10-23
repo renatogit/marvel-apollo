@@ -27,9 +27,13 @@ describe('resolvers/charactersResolver/characters', () => {
 	});
 
 	it('should return request error', async () => {
-		testRequestError(CharactersResolver.Query.characters, {}, {
-			entity: 'characters',
-			method: 'getCharacters',
-		});
+		testRequestError(
+			CharactersResolver.Query.characters,
+			{},
+			{
+				entity: 'characters',
+				method: 'getCharacters',
+			}
+		);
 	});
 });

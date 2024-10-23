@@ -1,9 +1,9 @@
 module.exports = {
 	Query: {
 		async comics(
-			_: any,
-			__: any,
-			{dataSources}: any
+			_: IComics,
+			__: object,
+			{dataSources}: IDataSources<IEntity<IComicsDataSources>>
 		): Promise<IResponse<IComics>> {
 			try {
 				const data = await dataSources.comics.getComics();
