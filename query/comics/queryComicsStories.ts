@@ -9,9 +9,5 @@ module.exports = `query GetComicsStories($comicsId: ID!) {
 			extension
 			path
 		}
-		originalissue{
-			name
-			resourceURI
-		}
 	}
 }`;
