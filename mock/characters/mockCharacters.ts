@@ -28,7 +28,6 @@ module.exports = {
 					extension: 'mock data',
 					path: 'mock data',
 				},
-
 			},
 		],
 	},

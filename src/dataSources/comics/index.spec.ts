@@ -1,11 +1,11 @@
 const ComicsDataSources = require('.');
 
 interface IComicsParams {
-    params: {
-        ts: string;
-        apikey: string;
-        hash: string;
-    };
+	params: {
+		ts: string;
+		apikey: string;
+		hash: string;
+	};
 }
 
 const paramsComicsApi: IComicsParams = {

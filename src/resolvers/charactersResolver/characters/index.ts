@@ -1,10 +1,10 @@
 module.exports = {
 	Query: {
 		async characters(
-			_: undefined,
+			_: ICharacters,
 			__: object,
-			{dataSources}: any
-		): Promise<IResponse<ICharacters[]>> {
+			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
+		): Promise<IResponse<ICharacters>> {
 			try {
 				const data = await dataSources.characters.getCharacters();
 				return data;

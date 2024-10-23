@@ -10,7 +10,7 @@ module.exports = async ({
 	variables,
 	entity,
 	typeQuery,
-}: any) => {
+}) => {
 	const instanceDataSourcesAPI = new dataSources();
 	instanceDataSourcesAPI.get = jest.fn(() => mock);
 

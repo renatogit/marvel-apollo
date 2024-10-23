@@ -109,10 +109,6 @@ module.exports = {
 							extension: 'mock data',
 							path: 'mock data',
 						},
-						originalissue: {
-							name: 'mock data',
-							resourceURI: 'mock data',
-						},
 					},
 				],
 			},

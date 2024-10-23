@@ -45,7 +45,7 @@ describe('resolvers/comicsResolver', () => {
 	describe('Comics.characters', () => {
 		it('should return the characters of comicsById ', async () => {
 			const COMICS_CHARACTERS = MOCK_GET_COMICS_BY_ID.data.results.map(
-				({characters}: any) => ({
+				({characters}: IComics) => ({
 					data: {results: characters},
 				})
 			);
@@ -83,7 +83,7 @@ describe('resolvers/comicsResolver', () => {
 	describe('Comics.creators', () => {
 		it('should return the creators of comicsById ', async () => {
 			const COMICS_CREATORS = MOCK_GET_COMICS_BY_ID.data.results.map(
-				({creators}: any) => ({
+				({creators}: IComics) => ({
 					data: {results: creators},
 				})
 			);
@@ -119,7 +119,7 @@ describe('resolvers/comicsResolver', () => {
 	describe('Comics.events', () => {
 		it('should return the events of comicsById ', async () => {
 			const COMICS_EVENTS = MOCK_GET_COMICS_BY_ID.data.results.map(
-				({events}: any) => ({
+				({events}: IComics) => ({
 					data: {results: events},
 				})
 			);
@@ -155,7 +155,7 @@ describe('resolvers/comicsResolver', () => {
 	describe('Comics.stories', () => {
 		it('should return the stories of comicsById ', async () => {
 			const COMICS_STORIES = MOCK_GET_COMICS_BY_ID.data.results.map(
-				({stories}: any) => ({
+				({stories}: IComics) => ({
 					data: {results: stories},
 				})
 			);

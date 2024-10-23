@@ -18,6 +18,6 @@
 		}
 	},
 	"files": ["src/types/graphql.d.ts"],
-	"include": ["src/**/*", "mock"],
-	"exclude": ["node_modules", "**/*.spec.ts"]
+	"include": ["src/**/*", "src/**/*.spec.ts"],
+	"exclude": ["node_modules"]
 }
