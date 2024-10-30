@@ -1,4 +1,10 @@
-interface ICharacters {
+import {IResponse, IUrl, IImage} from './IGenerics';
+import {IComics} from './IComics';
+import {ISeries} from './ISeries';
+import {IStories} from './IStories';
+import {IEvents} from './IEvents';
+
+export interface ICharacters {
 	id: number;
 	name: string;
 	description: string;
@@ -11,7 +17,7 @@ interface ICharacters {
 	events?: IEvents[];
 }
 
-interface ICharactersDataSources {
+export interface ICharactersDataSources {
 	getCharacters: () => Promise<IResponse<ICharacters>>;
 	getCharactersById: (
 		charactersId: string

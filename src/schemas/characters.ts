@@ -1,4 +1,4 @@
-module.exports = /* GraphQL */ `
+export default /* GraphQL */ `
 	type Character {
 		"""
 		O ID exclusivo do recurso de personagem

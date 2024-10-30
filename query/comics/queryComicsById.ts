@@ -1,4 +1,4 @@
-module.exports = `
+export default `
 	query GetComicsById($comicsId: ID!) {
 		comicsById(comicsId: $comicsId) {
 			code

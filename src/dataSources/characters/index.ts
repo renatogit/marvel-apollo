@@ -1,6 +1,7 @@
-const MarvelAPICharacters = require('../../configs/marvelAPI');
+import MarvelAPICharacters from '@/configs/marvelAPI';
+import {IResponse, ICharacters} from '@/types';
 
-class Characters extends MarvelAPICharacters {
+export default class Characters extends MarvelAPICharacters {
 	async getCharacters(): Promise<IResponse<ICharacters[]>> {
 		const data = await this.get('characters', {
 			params: this.params,
@@ -68,5 +69,3 @@ class Characters extends MarvelAPICharacters {
 		return data;
 	}
 }
-
-module.exports = Characters;

@@ -1,6 +1,7 @@
-const MarvelAPIComics = require('../../configs/marvelAPI');
+import Marvel from '@/configs/marvelAPI';
+import {IComics, IResponse} from '@/types';
 
-module.exports = class Comics extends MarvelAPIComics {
+export default class Comics extends Marvel {
 	async getComics(): Promise<IResponse<IComics[]>> {
 		const data = await this.get('comics', {
 			params: this.params,
@@ -54,4 +55,4 @@ module.exports = class Comics extends MarvelAPIComics {
 		);
 		return data;
 	}
-};
+}

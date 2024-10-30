@@ -1,4 +1,10 @@
-interface ICreators {
+import {IUrl, IImage} from './IGenerics';
+import {IComics} from './IComics';
+import {ISeries} from './ISeries';
+import {IStories} from './IStories';
+import {IEvents} from './IEvents';
+
+export interface ICreators {
 	id: number;
 	firstName: string;
 	middleName: string;

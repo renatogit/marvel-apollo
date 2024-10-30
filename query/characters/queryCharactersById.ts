@@ -1,4 +1,4 @@
-module.exports = `
+export default `
 	query GetCharactersById($charactersId: ID!) {
 		charactersById(charactersId: $charactersId) {
 			code

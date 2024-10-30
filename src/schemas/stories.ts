@@ -1,4 +1,4 @@
-module.exports = /* GraphQL */ `
+export default /* GraphQL */ `
 	type Story {
 		"""
 		O ID único do recurso da história

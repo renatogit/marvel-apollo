@@ -1,8 +1,16 @@
-module.exports = {
+import {
+	ICharacters,
+	IDataSources,
+	IEntity,
+	ICharactersDataSources,
+	IResponse,
+} from '@/types';
+
+export default {
 	Query: {
 		async characters(
 			_: ICharacters,
-			__: object,
+			__: Record<string, unknown>,
 			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
 		): Promise<IResponse<ICharacters>> {
 			try {

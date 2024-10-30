@@ -1,4 +1,4 @@
-module.exports = /* GraphQL */ `
+export default /* GraphQL */ `
 	type Query {
 		comics: ComicDataWrapper
 		comicsById(comicsId: ID!): ComicDataWrapper

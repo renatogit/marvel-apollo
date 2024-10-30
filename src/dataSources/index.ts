@@ -1,7 +1,7 @@
-const ComicsAPI = require('./comics');
-const CharactersAPI = require('./characters');
+import Comics from './comics';
+import CharactersAPI from './characters';
 
-module.exports = (cache: object) => ({
-	comics: new ComicsAPI({cache}),
+export default (cache) => ({
+	comics: new Comics({cache}),
 	characters: new CharactersAPI({cache}),
 });

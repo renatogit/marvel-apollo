@@ -1,8 +1,8 @@
-const CharactersResolver = require('.');
-const DataSourcesCharactersAPI = require('@/dataSources/characters');
-const ConfigServer = require('@/configs/test');
-const QUERY_GET_CHARACTERS = require('@query/characters/queryCharacters');
-const MOCK_GET_CHARACTERS = require('@mock/characters/mockCharacters');
+import CharactersResolver from '.';
+import DataSourcesCharactersAPI from '@/dataSources/characters';
+import ConfigServer from '@/configs/test';
+import QUERY_GET_CHARACTERS from '@query/characters/queryCharacters';
+import MOCK_GET_CHARACTERS from '@mock/characters/mockCharacters';
 
 describe('resolvers/charactersResolver/integration', () => {
 	it('fetches characters and generate snapshots', async () => {

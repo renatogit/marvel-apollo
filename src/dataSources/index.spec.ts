@@ -1,6 +1,6 @@
-const createAPI = require('.');
-const TestComicsAPI = require('./comics');
-const TestCharactersAPI = require('./characters');
+import createAPI from '.';
+import TestComicsAPI from './comics';
+import TestCharactersAPI from './characters';
 
 describe('API Module', () => {
 	const mockCache: Record<string, object> = {};

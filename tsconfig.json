@@ -1,7 +1,6 @@
 {
 	"compilerOptions": {
 		"noUnusedLocals": true,
-		"rootDirs": ["src"],
 		"outDir": "dist",
 		"lib": ["es6"],
 		"target": "es6",
@@ -10,9 +9,9 @@
 		"esModuleInterop": true,
 		"types": ["jest", "node"],
 		"typeRoots": ["node_modules/@types", "src/@types"],
-		"baseUrl": "./src",
+		"baseUrl": ".",
 		"paths": {
-			"@configs/*": ["configs/*"],
+			"@/*": ["src/*"],
 			"@mock/*": ["mock/*"],
 			"@query/*": ["query/*"]
 		}

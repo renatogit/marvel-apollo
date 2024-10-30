@@ -1,4 +1,4 @@
-module.exports = `
+export default `
 	query GetCharactersEvents($charactersId: ID!) {
 		charactersSeries(charactersId: $charactersId) {
 			id

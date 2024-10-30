@@ -35,8 +35,7 @@ export default [
 					printWidth: 80,
 				},
 			],
-			//todo
-			'@typescript-eslint/no-unused-vars': ['off'],
+			'@typescript-eslint/no-unused-vars': ['error'],
 			'@typescript-eslint/no-require-imports': ['off'],
 			'import/namespace': ['off'],
 			'import/named': ['off'],

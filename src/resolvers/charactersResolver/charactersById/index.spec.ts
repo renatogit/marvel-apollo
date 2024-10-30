@@ -1,13 +1,15 @@
-const DataSourcesCharactersAPI = require('@/dataSources/characters');
-const CharactersResolver = require('.');
-const ServerGetCharacters = require('@/configs/test');
-const QUERY_GET_CHARACTERS_BY_ID = require('@query/characters/queryCharactersById');
-const QUERY_GET_CHARACTERS_COMICS = require('@query/characters/queryCharactersComics');
-const QUERY_GET_CHARACTERS_EVENTS = require('@query/characters/queryCharactersEvents');
-const QUERY_GET_CHARACTERS_SERIES = require('@query/characters/queryCharactersSeries');
-const QUERY_GET_CHARACTERS_STORIES = require('@query/characters/queryCharactersStories');
-const MOCK_GET_CHARACTERS_BY_ID = require('@mock/characters/mockCharactersById');
-const testRequestError = require('@utils/testRequestError');
+import DataSourcesCharactersAPI from '@/dataSources/characters';
+import CharactersResolver from '.';
+import ServerGetCharacters from '@/configs/test';
+import testRequestError from '@/utils/testRequestError';
+import MOCK_GET_CHARACTERS_BY_ID from '@mock/characters/mockCharactersById';
+import {
+	QUERY_GET_CHARACTERS_BY_ID,
+	QUERY_GET_CHARACTERS_COMICS,
+	QUERY_GET_CHARACTERS_EVENTS,
+	QUERY_GET_CHARACTERS_SERIES,
+	QUERY_GET_CHARACTERS_STORIES,
+} from '@query/characters';
 
 describe('resolvers/charactersResolver/charactersById', () => {
 	const variables = {charactersId: 'fake-code'};
@@ -29,9 +31,12 @@ describe('resolvers/charactersResolver/charactersById', () => {
 				query: QUERY_GET_CHARACTERS_BY_ID,
 				variables,
 			});
-
-			expect(body.singleResult.errors).toBeUndefined();
-			expect(body.singleResult.data.charactersById).toEqual(mockResponse);
+			if (body.kind == 'single') {
+				expect(body.singleResult.errors).toBeUndefined();
+				expect(body.singleResult.data.charactersById).toEqual(
+					mockResponse
+				);
+			}
 		});
 
 		it('should return the charactersById request error', async () => {
@@ -49,11 +54,9 @@ describe('resolvers/charactersResolver/charactersById', () => {
 	describe('Characters.comics', () => {
 		it('should return the comics of charactersById ', async () => {
 			const CHARACTERS_COMICS =
-				MOCK_GET_CHARACTERS_BY_ID.data.results.map(
-					({comics}: IEntity<ICharacters>) => ({
-						data: {results: comics},
-					})
-				);
+				MOCK_GET_CHARACTERS_BY_ID.data.results.map(({comics}) => ({
+					data: {results: comics},
+				}));
 
 			const args = {
 				dataSources: DataSourcesCharactersAPI,
@@ -71,10 +74,12 @@ describe('resolvers/charactersResolver/charactersById', () => {
 				variables,
 			});
 
-			expect(body.singleResult.errors).toBeUndefined();
-			expect(body.singleResult.data.charactersComics).toEqual(
-				mockResponse
-			);
+			if (body.kind == 'single') {
+				expect(body.singleResult.errors).toBeUndefined();
+				expect(body.singleResult.data.charactersComics).toEqual(
+					mockResponse
+				);
+			}
 		});
 
 		it('should return a CharactersComics request error ', () => {
@@ -92,11 +97,9 @@ describe('resolvers/charactersResolver/charactersById', () => {
 	describe('Characters.events', () => {
 		it('should return the events of charactersById ', async () => {
 			const CHARACTERS_EVENTS =
-				MOCK_GET_CHARACTERS_BY_ID.data.results.map(
-					({events}: ICharacters) => ({
-						data: {results: events},
-					})
-				);
+				MOCK_GET_CHARACTERS_BY_ID.data.results.map(({events}) => ({
+					data: {results: events},
+				}));
 
 			const args = {
 				dataSources: DataSourcesCharactersAPI,
@@ -114,10 +117,12 @@ describe('resolvers/charactersResolver/charactersById', () => {
 				variables,
 			});
 
-			expect(body.singleResult.errors).toBeUndefined();
-			expect(body.singleResult.data.charactersEvents).toEqual(
-				mockResponse
-			);
+			if (body.kind == 'single') {
+				expect(body.singleResult.errors).toBeUndefined();
+				expect(body.singleResult.data.charactersEvents).toEqual(
+					mockResponse
+				);
+			}
 		});
 
 		it('should return a CharactersEvents request error ', () => {
@@ -135,11 +140,9 @@ describe('resolvers/charactersResolver/charactersById', () => {
 	describe('Characters.series', () => {
 		it('should return the series of charactersById ', async () => {
 			const CHARACTERS_SERIES =
-				MOCK_GET_CHARACTERS_BY_ID.data.results.map(
-					({series}: ICharacters) => ({
-						data: {results: series},
-					})
-				);
+				MOCK_GET_CHARACTERS_BY_ID.data.results.map(({series}) => ({
+					data: {results: series},
+				}));
 
 			const args = {
 				dataSources: DataSourcesCharactersAPI,
@@ -157,10 +160,12 @@ describe('resolvers/charactersResolver/charactersById', () => {
 				variables,
 			});
 
-			expect(body.singleResult.errors).toBeUndefined();
-			expect(body.singleResult.data.charactersSeries).toEqual(
-				mockResponse
-			);
+			if (body.kind == 'single') {
+				expect(body.singleResult.errors).toBeUndefined();
+				expect(body.singleResult.data.charactersSeries).toEqual(
+					mockResponse
+				);
+			}
 		});
 
 		it('should return a CharactersSeries request error ', () => {
@@ -178,11 +183,9 @@ describe('resolvers/charactersResolver/charactersById', () => {
 	describe('Characters.stories', () => {
 		it('should return the stories of charactersById ', async () => {
 			const CHARACTERS_STORIES =
-				MOCK_GET_CHARACTERS_BY_ID.data.results.map(
-					({stories}: ICharacters) => ({
-						data: {results: stories},
-					})
-				);
+				MOCK_GET_CHARACTERS_BY_ID.data.results.map(({stories}) => ({
+					data: {results: stories},
+				}));
 
 			const args = {
 				dataSources: DataSourcesCharactersAPI,
@@ -200,10 +203,12 @@ describe('resolvers/charactersResolver/charactersById', () => {
 				variables,
 			});
 
-			expect(body.singleResult.errors).toBeUndefined();
-			expect(body.singleResult.data.charactersStories).toEqual(
-				mockResponse
-			);
+			if (body.kind == 'single') {
+				expect(body.singleResult.errors).toBeUndefined();
+				expect(body.singleResult.data.charactersStories).toEqual(
+					mockResponse
+				);
+			}
 		});
 
 		it('should return a CharactersStories request error ', () => {
