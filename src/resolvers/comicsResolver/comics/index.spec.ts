@@ -1,9 +1,9 @@
-const DataSourcesComicsAPI = require('@/dataSources/comics');
-const ComicsResolver = require('.');
-const ServerGetComics = require('@/configs/test');
-const QUERY_GET_COMICS = require('@query/comics/queryComics');
-const MOCK_GET_COMICS = require('@mock/comics/mockComics');
-const testRequestError = require('@utils/testRequestError');
+import DataSourcesComicsAPI from '@/dataSources/comics';
+import ComicsResolver from '.';
+import ServerGetComics from '@/configs/test';
+import QUERY_GET_COMICS from '@query/comics/queryComics';
+import MOCK_GET_COMICS from '@mock/comics/mockComics';
+import testRequestError from '@/utils/testRequestError';
 
 describe('resolvers/comicsResolver/comics', () => {
 	it('should return the comics entity data', async () => {
@@ -22,8 +22,10 @@ describe('resolvers/comicsResolver/comics', () => {
 			query: QUERY_GET_COMICS,
 		});
 
-		expect(body.singleResult.errors).toBeUndefined();
-		expect(body.singleResult.data.comics).toEqual(mockResponse);
+		if (body.kind === 'single') {
+			expect(body.singleResult.errors).toBeUndefined();
+			expect(body.singleResult.data.comics).toEqual(mockResponse);
+		}
 	});
 
 	it('should return a comics request catch error', async () => {

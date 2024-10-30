@@ -1,8 +1,8 @@
-const {startStandaloneServer} = require('@apollo/server/standalone');
-const server = require('./server')
-const dataSources = require('./dataSources');
+import {startStandaloneServer} from '@apollo/server/standalone';
+import server from './server';
+import dataSources from './dataSources';
 
-const url: Promise<{url: string}> = startStandaloneServer(server, {
+const url = startStandaloneServer(server, {
 	context: async () => {
 		const {cache} = server;
 		return {
@@ -14,4 +14,4 @@ const url: Promise<{url: string}> = startStandaloneServer(server, {
 	listen: {port: 4000},
 });
 
-console.log('🚀 Server ready at:\x1b[33m http://localhost:4000');
+url.then(({url}) => console.warn(`🚀 Server ready at:\x1b[33m ${url}`));

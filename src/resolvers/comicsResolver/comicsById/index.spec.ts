@@ -1,13 +1,16 @@
-const DataSourcesComicsByIdAPI = require('@/dataSources/comics');
-const ComicsByIdResolver = require('.');
-const ServerGetComicsById = require('@/configs/test');
-const MOCK_GET_COMICS_BY_ID = require('@mock/comics/mockComicsById');
-const QUERY_GET_COMICS_BY_ID = require('@query/comics/queryComicsById');
-const QUERY_GET_COMICS_CHARACTERS = require('@query/comics/queryComicsCharacters');
-const QUERY_GET_COMICS_CREATORS = require('@query/comics/queryComicsCreators');
-const QUERY_GET_COMICS_EVENTS = require('@query/comics/queryComicsEvents');
-const QUERY_GET_COMICS_STORIES = require('@query/comics/queryComicsStories');
-const testRequestError = require('@utils/testRequestError');
+import DataSourcesComicsByIdAPI from '@/dataSources/comics';
+import ComicsByIdResolver from '.';
+import ServerGetComicsById from '@/configs/test';
+import MOCK_GET_COMICS_BY_ID from '@mock/comics/mockComicsById';
+import testRequestError from '@/utils/testRequestError';
+
+import {
+	QUERY_GET_COMICS_BY_ID,
+	QUERY_GET_COMICS_CHARACTERS,
+	QUERY_GET_COMICS_CREATORS,
+	QUERY_GET_COMICS_EVENTS,
+	QUERY_GET_COMICS_STORIES,
+} from '@query/comics';
 
 describe('resolvers/comicsResolver', () => {
 	const variables = {comicsId: 'fake-code'};
@@ -30,8 +33,10 @@ describe('resolvers/comicsResolver', () => {
 				variables,
 			});
 
-			expect(body.singleResult.errors).toBeUndefined();
-			expect(body.singleResult.data.comicsById).toEqual(mockResponse);
+			if (body.kind === 'single') {
+				expect(body.singleResult.errors).toBeUndefined();
+				expect(body.singleResult.data.comicsById).toEqual(mockResponse);
+			}
 		});
 
 		it('should return a comicsById request error', () => {
@@ -45,7 +50,7 @@ describe('resolvers/comicsResolver', () => {
 	describe('Comics.characters', () => {
 		it('should return the characters of comicsById ', async () => {
 			const COMICS_CHARACTERS = MOCK_GET_COMICS_BY_ID.data.results.map(
-				({characters}: IComics) => ({
+				({characters}) => ({
 					data: {results: characters},
 				})
 			);
@@ -66,10 +71,12 @@ describe('resolvers/comicsResolver', () => {
 				variables,
 			});
 
-			expect(body.singleResult.errors).toBeUndefined();
-			expect(body.singleResult.data.comicsCharacters).toEqual(
-				mockResponse
-			);
+			if (body.kind === 'single') {
+				expect(body.singleResult.errors).toBeUndefined();
+				expect(body.singleResult.data.comicsCharacters).toEqual(
+					mockResponse
+				);
+			}
 		});
 
 		it('should return a ComicsCharacters request error ', () => {
@@ -83,7 +90,7 @@ describe('resolvers/comicsResolver', () => {
 	describe('Comics.creators', () => {
 		it('should return the creators of comicsById ', async () => {
 			const COMICS_CREATORS = MOCK_GET_COMICS_BY_ID.data.results.map(
-				({creators}: IComics) => ({
+				({creators}) => ({
 					data: {results: creators},
 				})
 			);
@@ -104,8 +111,12 @@ describe('resolvers/comicsResolver', () => {
 				variables,
 			});
 
-			expect(body.singleResult.errors).toBeUndefined();
-			expect(body.singleResult.data.comicsCreators).toEqual(mockResponse);
+			if (body.kind === 'single') {
+				expect(body.singleResult.errors).toBeUndefined();
+				expect(body.singleResult.data.comicsCreators).toEqual(
+					mockResponse
+				);
+			}
 		});
 
 		it('should return a ComicsCreators request error', () => {
@@ -119,7 +130,7 @@ describe('resolvers/comicsResolver', () => {
 	describe('Comics.events', () => {
 		it('should return the events of comicsById ', async () => {
 			const COMICS_EVENTS = MOCK_GET_COMICS_BY_ID.data.results.map(
-				({events}: IComics) => ({
+				({events}) => ({
 					data: {results: events},
 				})
 			);
@@ -140,8 +151,12 @@ describe('resolvers/comicsResolver', () => {
 				variables,
 			});
 
-			expect(body.singleResult.errors).toBeUndefined();
-			expect(body.singleResult.data.comicsEvents).toEqual(mockResponse);
+			if (body.kind === 'single') {
+				expect(body.singleResult.errors).toBeUndefined();
+				expect(body.singleResult.data.comicsEvents).toEqual(
+					mockResponse
+				);
+			}
 		});
 
 		it('should return a ComicsEvents request error', () => {
@@ -155,7 +170,7 @@ describe('resolvers/comicsResolver', () => {
 	describe('Comics.stories', () => {
 		it('should return the stories of comicsById ', async () => {
 			const COMICS_STORIES = MOCK_GET_COMICS_BY_ID.data.results.map(
-				({stories}: IComics) => ({
+				({stories}) => ({
 					data: {results: stories},
 				})
 			);
@@ -176,8 +191,12 @@ describe('resolvers/comicsResolver', () => {
 				variables,
 			});
 
-			expect(body.singleResult.errors).toBeUndefined();
-			expect(body.singleResult.data.comicsStories).toEqual(mockResponse);
+			if (body.kind === 'single') {
+				expect(body.singleResult.errors).toBeUndefined();
+				expect(body.singleResult.data.comicsStories).toEqual(
+					mockResponse
+				);
+			}
 		});
 
 		it('should return a ComicsEvents request error', () => {

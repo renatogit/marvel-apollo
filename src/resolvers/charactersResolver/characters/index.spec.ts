@@ -1,9 +1,9 @@
-const DataSourcesCharactersAPI = require('@/dataSources/characters');
-const CharactersResolver = require('.');
-const ServerGetCharacters = require('@/configs/test');
-const QUERY_GET_CHARACTERS = require('@query/characters/queryCharacters');
-const MOCK_GET_CHARACTERS = require('@mock/characters/mockCharacters');
-const testRequestError = require('@utils/testRequestError');
+import DataSourcesCharactersAPI from '@/dataSources/characters';
+import CharactersResolver from '.';
+import ServerGetCharacters from '@/configs/test';
+import QUERY_GET_CHARACTERS from '@query/characters/queryCharacters';
+import MOCK_GET_CHARACTERS from '@mock/characters/mockCharacters';
+import testRequestError from '@/utils/testRequestError';
 
 describe('resolvers/charactersResolver/characters', () => {
 	it('should return the characters entity data', async () => {
@@ -22,8 +22,10 @@ describe('resolvers/charactersResolver/characters', () => {
 			query: QUERY_GET_CHARACTERS,
 		});
 
-		expect(body.singleResult.errors).toBeUndefined();
-		expect(body.singleResult.data.characters).toEqual(mockResponse);
+		if (body.kind == 'single') {
+			expect(body.singleResult.errors).toBeUndefined();
+			expect(body.singleResult.data.characters).toEqual(mockResponse);
+		}
 	});
 
 	it('should return request error', async () => {

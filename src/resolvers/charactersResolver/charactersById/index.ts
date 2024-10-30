@@ -1,4 +1,12 @@
-module.exports = {
+import {
+	ICharacters,
+	IID,
+	IDataSources,
+	IEntity,
+	ICharactersDataSources,
+} from '@/types';
+
+export default {
 	Query: {
 		charactersById: async (
 			_: ICharacters,
@@ -21,7 +29,7 @@ module.exports = {
 	Character: {
 		comics: async (
 			res: ICharacters,
-			__: object,
+			__: Record<string, unknown>,
 			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
 		) => {
 			const charactersId = res.id;
@@ -38,7 +46,7 @@ module.exports = {
 		},
 		stories: async (
 			res: ICharacters,
-			__: object,
+			__: Record<string, unknown>,
 			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
 		) => {
 			const charactersId = res.id;
@@ -55,7 +63,7 @@ module.exports = {
 		},
 		events: async (
 			res: ICharacters,
-			__: object,
+			__: Record<string, unknown>,
 			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
 		) => {
 			const charactersId = res.id;
@@ -72,7 +80,7 @@ module.exports = {
 		},
 		series: async (
 			res: ICharacters,
-			__: object,
+			__: Record<string, unknown>,
 			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
 		) => {
 			const charactersId = res.id;

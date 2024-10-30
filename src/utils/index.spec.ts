@@ -1,8 +1,8 @@
-const moduleTest = require('./testRequestError');
+import moduleTest from './testRequestError';
 
 describe('src/utils/test', () => {
 	it('should throw an error with the correct message when the data source fails ', async () => {
-		const mockResolver = jest.fn((_, __, {dataSources}) => {
+		const mockResolver = jest.fn(() => {
 			return Promise.reject('mockError: Failed to fetch mockMethod');
 		});
 

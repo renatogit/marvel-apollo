@@ -1,10 +1,6 @@
-module.exports = {
+export default {
 	Query: {
-		async comics(
-			_: IComics,
-			__: object,
-			{dataSources}: IDataSources<IEntity<IComicsDataSources>>
-		): Promise<IResponse<IComics>> {
+		async comics(_, __, {dataSources}) {
 			try {
 				const data = await dataSources.comics.getComics();
 				return data;

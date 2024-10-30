@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	code: 200,
 	status: 'mock data',
 	copyright: 'mock data',

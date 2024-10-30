@@ -1,8 +1,8 @@
-const ComicsResolver = require('.');
-const DataSourcesComicsAPI = require('@/dataSources/comics');
-const TestServer = require('@/configs/test');
-const QUERY_GET_COMICS = require('@query/comics/queryComics');
-const MOCK_GET_COMICS = require('@mock/comics/mockComics');
+import ComicsResolver from '.';
+import DataSourcesComicsAPI from '@/dataSources/comics';
+import TestServer from '@/configs/test';
+import QUERY_GET_COMICS from '@query/comics/queryComics';
+import MOCK_GET_COMICS from '@mock/comics/mockComics';
 
 describe('resolvers/comicsResolver/integration', () => {
 	it('fetches comics and generate snapshots', async () => {

@@ -1,4 +1,11 @@
-interface IEvents {
+import {IUrl, IImage} from './IGenerics';
+import {IComics} from './IComics';
+import {IStories} from './IStories';
+import {ISeries} from './ISeries';
+import {ICharacters} from './ICharacters';
+import {ICreators} from './ICreators';
+
+export interface IEvents {
 	id: number;
 	title: string;
 	description: string;

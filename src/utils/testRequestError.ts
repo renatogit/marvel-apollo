@@ -1,8 +1,4 @@
-module.exports = async (
-	resolver: any,
-	variables: {[key: string]: string},
-	dataSources: {entity: string; method: string}
-) => {
+export default async (resolver, variables, dataSources) => {
 	const {entity, method} = dataSources;
 	const errorMessage = `mockError: Failed to fetch ${method}`;
 
