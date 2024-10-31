@@ -1,10 +1,18 @@
-module.exports = {
+import {
+	ICharacters,
+	IDataSources,
+	IEntity,
+	ICharactersDataSources,
+	IResponse,
+} from '@/types';
+
+export default {
 	Query: {
 		async characters(
-			_: undefined,
-			__: object,
-			{dataSources}: any
-		): Promise<IResponse<ICharacters[]>> {
+			_: ICharacters,
+			__: Record<string, unknown>,
+			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
+		): Promise<IResponse<ICharacters>> {
 			try {
 				const data = await dataSources.characters.getCharacters();
 				return data;

@@ -1,4 +1,4 @@
-module.exports = `query GetComicsStories($comicsId: ID!) {
+export default `query GetComicsStories($comicsId: ID!) {
 	comicsStories(comicsId: $comicsId) {
 		id
 		title
@@ -8,10 +8,6 @@ module.exports = `query GetComicsStories($comicsId: ID!) {
 		thumbnail{
 			extension
 			path
-		}
-		originalissue{
-			name
-			resourceURI
 		}
 	}
 }`;

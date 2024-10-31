@@ -1,11 +1,11 @@
-const ComicsDataSources = require('.');
+import ComicsDataSources from '.';
 
 interface IComicsParams {
-    params: {
-        ts: string;
-        apikey: string;
-        hash: string;
-    };
+	params: {
+		ts: string;
+		apikey: string;
+		hash: string;
+	};
 }
 
 const paramsComicsApi: IComicsParams = {
@@ -17,7 +17,7 @@ const paramsComicsApi: IComicsParams = {
 };
 
 describe('dataSources/comics', () => {
-	let comics: typeof ComicsDataSources;
+	let comics;
 	beforeEach(() => {
 		comics = new ComicsDataSources();
 		comics.get = jest.fn();

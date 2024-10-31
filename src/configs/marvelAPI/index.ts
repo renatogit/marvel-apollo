@@ -1,22 +1,22 @@
-const {RESTDataSource} = require('@apollo/datasource-rest');
-const md5 = require('md5');
-const dotenv = require('dotenv');
+import {RESTDataSource} from '@apollo/datasource-rest';
+import md5 from 'md5';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-const ts: string = new Date().getTime().toString();
-const PRIVATE_KEY: string = process.env.PRIVATE_KEY;
-const PUBLIC_KEY: string = process.env.PUBLIC_KEY;
+const ts = new Date().getTime().toString();
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const PUBLIC_KEY = process.env.PUBLIC_KEY;
 const hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
 
 // console.log(`http://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`);
 
-module.exports = class Marvel extends RESTDataSource {
+export default class Marvel extends RESTDataSource {
 	baseURL = 'https://gateway.marvel.com/v1/public/';
 	params = {
-		limit: 10,
+		limit: String(10),
 		ts,
 		apikey: PUBLIC_KEY,
 		hash,
 	};
-};
+}

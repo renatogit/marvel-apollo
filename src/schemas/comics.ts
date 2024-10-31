@@ -1,4 +1,4 @@
-module.exports = /* GraphQL */ `
+export default /* GraphQL */ `
 	type Comic {
 		"""
 		O ID exclusivo do recurso de quadrinhos

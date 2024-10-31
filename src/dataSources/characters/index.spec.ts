@@ -1,4 +1,4 @@
-const CharactersDataSources = require('.');
+import CharactersDataSources from '.';
 
 interface ICharactersParams {
 	params: {
@@ -17,7 +17,7 @@ const paramsCharactersApi: ICharactersParams = {
 };
 
 describe('dataSources/characters', () => {
-	let characters: typeof CharactersDataSources;
+	let characters;
 	beforeEach(() => {
 		characters = new CharactersDataSources();
 		characters.get = jest.fn();

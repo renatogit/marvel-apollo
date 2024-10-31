@@ -1,4 +1,4 @@
-interface IResponse<T> {
+export interface IResponse<T> {
 	code: number;
 	status: string;
 	data: IResponseData<T>;
@@ -13,50 +13,47 @@ interface IResponseData<T> {
 	results: T[];
 }
 
-interface IDataSources {
-	comics: IComicsDataSources;
+export interface IDataSources<T> {
+	dataSources: T;
 }
 
-interface IUrl {
+export interface IEntity<T> {
+	[key: string]: T;
+}
+
+export interface IUrl {
 	type: string;
 	url: string;
 }
 
-interface IImage {
+export interface IImage {
 	path: string;
 	extension: string;
 }
 
-interface IUri {
+export interface IUri {
 	name: string;
 	resourceURI: string;
 	role: string;
 }
 
-interface ITextObjects {
+export interface ITextObjects {
 	type: string;
 	text: string;
 	language: string;
 }
 
-interface IDates {
+export interface IDates {
 	type: string;
 	date: string;
 }
 
-interface IPrice {
+export interface IPrice {
 	type: string;
 	price: number;
 }
 
-interface IGenericCollections {
-	available: number;
-	collectionURI: string;
-	items: IUri[];
-	returned: number;
-}
-
-interface IID {
+export interface IID {
 	comicsId: string;
 	charactersId: string;
 }

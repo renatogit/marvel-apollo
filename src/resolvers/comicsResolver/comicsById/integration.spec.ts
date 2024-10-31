@@ -1,8 +1,8 @@
-const DataSourcesComicsByIdAPI = require('@/dataSources/comics');
-const ComicsByIdResolver = require('.');
-const ServerGetComicsById = require('@/configs/test');
-const QUERY_GET_COMICS_BY_ID = require('@query/comics/queryComicsById');
-const MOCK_GET_COMICS_BY_ID = require('@mock/comics/mockComicsById');
+import DataSourcesComicsByIdAPI from '@/dataSources/comics';
+import ComicsByIdResolver from '.';
+import ServerGetComicsById from '@/configs/test';
+import QUERY_GET_COMICS_BY_ID from '@query/comics/queryComicsById';
+import MOCK_GET_COMICS_BY_ID from '@mock/comics/mockComicsById';
 
 describe('resolvers/comicsByIdResolver/integration', () => {
 	const variables = {comicsId: 'fake-code'};

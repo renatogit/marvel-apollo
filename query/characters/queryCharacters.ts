@@ -1,4 +1,4 @@
-module.exports = `
+export default `
 	query GetCharacters {
 		characters {
 			code

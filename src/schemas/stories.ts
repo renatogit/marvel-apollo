@@ -1,4 +1,4 @@
-module.exports = /* GraphQL */ `
+export default /* GraphQL */ `
 	type Story {
 		"""
 		O ID único do recurso da história
@@ -48,10 +48,6 @@ module.exports = /* GraphQL */ `
 		Uma lista de criadores que trabalharam nesta história
 		"""
 		creators: GenericCollections
-		"""
-		Uma representação resumida da edição na qual esta história foi originalmente publicada.
-		"""
-		originalissue: Uri
 	}
 
 	type StoryDataContainer {

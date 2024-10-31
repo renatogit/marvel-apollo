@@ -1,16 +1,16 @@
-const {ApolloServer: Server} = require('@apollo/server');
-const {join} = require('path');
-const {loadFilesSync: loadFiles} = require('@graphql-tools/load-files');
-const {mergeTypeDefs: mergeTypeTest} = require('@graphql-tools/merge');
+import {ApolloServer as Server} from '@apollo/server';
+import {join} from 'path';
+import {loadFilesSync as loadFiles} from '@graphql-tools/load-files';
+import {mergeTypeDefs as mergeTypeTest} from '@graphql-tools/merge';
 
-module.exports = async ({
+export default async ({
 	dataSources,
 	resolver,
 	mock,
 	variables,
 	entity,
 	typeQuery,
-}: any) => {
+}) => {
 	const instanceDataSourcesAPI = new dataSources();
 	instanceDataSourcesAPI.get = jest.fn(() => mock);
 

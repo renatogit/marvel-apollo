@@ -1,4 +1,4 @@
-module.exports = /* GraphQL */ `
+export default /* GraphQL */ `
 	type Character {
 		"""
 		O ID exclusivo do recurso de personagem
@@ -31,7 +31,7 @@ module.exports = /* GraphQL */ `
 		"""
 		Uma lista de recursos de histórias nas quais esse personagem aparece
 		"""
-		stories:[GenericEntity]
+		stories: [GenericEntity]
 		"""
 		Uma lista de recursos de eventos em que este personagem aparece
 		"""
@@ -60,7 +60,7 @@ module.exports = /* GraphQL */ `
 		"""
 		count: Float
 		"""
- 		A lista de caracteres retornados pela chamada
+		A lista de caracteres retornados pela chamada
 		"""
 		results: [Character]
 	}

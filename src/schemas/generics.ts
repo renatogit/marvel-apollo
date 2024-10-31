@@ -1,4 +1,4 @@
-module.exports = /* GraphQL */ `
+export default /* GraphQL */ `
 	type Url {
 		type: String
 		url: String
@@ -68,7 +68,6 @@ module.exports = /* GraphQL */ `
 	extend type GenericEntity {
 		suffix: String
 		fullName: String
-		# TODO verificar se deve fazer chamada de series
 		series: GenericCollections
 	}
 

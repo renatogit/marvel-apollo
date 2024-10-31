@@ -1,7 +1,7 @@
-const path = require('path');
-const {ApolloServer} = require('@apollo/server');
-const {loadFilesSync} = require('@graphql-tools/load-files');
-const {mergeTypeDefs, mergeResolvers} = require('@graphql-tools/merge');
+import path from 'path';
+import {ApolloServer} from '@apollo/server';
+import {loadFilesSync} from '@graphql-tools/load-files';
+import {mergeTypeDefs, mergeResolvers} from '@graphql-tools/merge';
 
 const schemaFiles = loadFilesSync(path.join(__dirname, '../schemas'), {
 	recursive: true,
@@ -11,7 +11,7 @@ const resolverFiles = loadFilesSync(path.join(__dirname, '../resolvers'), {
 	recursive: true,
 });
 
-module.exports = new ApolloServer({
+export default new ApolloServer({
 	typeDefs: mergeTypeDefs(schemaFiles),
 	resolvers: mergeResolvers(resolverFiles),
 });
