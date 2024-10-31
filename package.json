@@ -1,7 +1,7 @@
 {
 	"name": "marvel-apollo",
-	"version": "1.0.0",
 	"description": "Optimize requests made to the Marvel API through GraphQL management",
+	"version": "1.1.0",
 	"main": "index.js",
 	"scripts": {
 		"coverage": "jest --coverage && http-server coverage/lcov-report",
