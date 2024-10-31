@@ -1,9 +1,17 @@
-module.exports = {
+import {
+	ICharacters,
+	IID,
+	IDataSources,
+	IEntity,
+	ICharactersDataSources,
+} from '@/types';
+
+export default {
 	Query: {
 		charactersById: async (
 			_: ICharacters,
 			{charactersId}: IID,
-			{dataSources}: any
+			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
 		) => {
 			try {
 				const data =
@@ -19,7 +27,11 @@ module.exports = {
 		},
 	},
 	Character: {
-		comics: async (res: ICharacters, __: any, {dataSources}: any) => {
+		comics: async (
+			res: ICharacters,
+			__: Record<string, unknown>,
+			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
+		) => {
 			const charactersId = res.id;
 
 			try {
@@ -32,7 +44,11 @@ module.exports = {
 				throw new Error(`ERROR: ${error.message}`);
 			}
 		},
-		stories: async (res: ICharacters, __: any, {dataSources}: any) => {
+		stories: async (
+			res: ICharacters,
+			__: Record<string, unknown>,
+			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
+		) => {
 			const charactersId = res.id;
 
 			try {
@@ -45,7 +61,11 @@ module.exports = {
 				throw new Error(`ERROR: ${error.message}`);
 			}
 		},
-		events: async (res: ICharacters, __: any, {dataSources}: any) => {
+		events: async (
+			res: ICharacters,
+			__: Record<string, unknown>,
+			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
+		) => {
 			const charactersId = res.id;
 
 			try {
@@ -58,7 +78,11 @@ module.exports = {
 				throw new Error(`ERROR: ${error.message}`);
 			}
 		},
-		series: async (res: ICharacters, __: any, {dataSources}: any) => {
+		series: async (
+			res: ICharacters,
+			__: Record<string, unknown>,
+			{dataSources}: IDataSources<IEntity<ICharactersDataSources>>
+		) => {
 			const charactersId = res.id;
 
 			try {

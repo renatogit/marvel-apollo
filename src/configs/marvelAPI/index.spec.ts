@@ -1,4 +1,4 @@
-const MarvelTest = require('.');
+import MarvelTest from '.';
 
 const paramsMarvelApi = {
 	ts: 'fake',

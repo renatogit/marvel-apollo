@@ -1,4 +1,4 @@
-module.exports = /* GraphQL */ `
+export default /* GraphQL */ `
 	type Creator {
 		"""
 		The unique ID of the creator resource
