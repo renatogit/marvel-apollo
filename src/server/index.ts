@@ -11,7 +11,7 @@ const resolverFiles = loadFilesSync(path.join(__dirname, '../resolvers'), {
 	recursive: true,
 });
 
-export default new ApolloServer({
+export default new ApolloServer<Record<string, unknown>>({
 	typeDefs: mergeTypeDefs(schemaFiles),
 	resolvers: mergeResolvers(resolverFiles),
 });
