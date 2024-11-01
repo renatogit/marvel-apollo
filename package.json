@@ -11,7 +11,7 @@
 		"prepare": "husky",
 		"test": "jest",
 		"test:dev": "jest --coverage --watch",
-		"start": "rm -rf dist && tsc && node --experimental-specifier-resolution=node dist/src/index.js"
+		"start": "rm -rf dist && tsc && ts-node -r tsconfig-paths/register dist/src/index.js"
 	},
 	"keywords": [],
 	"author": "Renato O P Silva",
@@ -23,7 +23,8 @@
 		"@graphql-tools/merge": "^9.0.4",
 		"graphql": "^16.8.1",
 		"http-server": "^14.1.1",
-		"md5": "^2.3.0"
+		"md5": "^2.3.0",
+		"ts-node": "^10.9.2"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.1",
@@ -48,5 +49,9 @@
 	"engines": {
 		"npm": ">=10.5.0",
 		"node": ">=20.12.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/renatogit/marvel-apollo"
 	}
 }
