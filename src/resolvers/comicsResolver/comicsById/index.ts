@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
 	IComics,
 	IID,
@@ -40,19 +41,13 @@ export default {
 					await dataSources.comics.getComicsCharacters(comicsId);
 				return data.results.map(
 					({
-						id,
-						name,
-						description,
-						modified,
-						urls,
-						thumbnail,
+						comics,
+						series,
+						stories,
+						events,
+						...rest
 					}: ICharacters) => ({
-						id,
-						name,
-						description,
-						modified,
-						urls,
-						thumbnail,
+						...rest,
 					})
 				);
 			} catch (error) {
@@ -71,25 +66,13 @@ export default {
 					await dataSources.comics.getComicsCreators(comicsId);
 				return data.results.map(
 					({
-						id,
-						firstName,
-						middleName,
-						lastName,
-						suffix,
-						fullName,
-						modified,
-						urls,
-						thumbnail,
+						series,
+						stories,
+						comics,
+						events,
+						...rest
 					}: ICreators) => ({
-						id,
-						firstName,
-						middleName,
-						lastName,
-						suffix,
-						fullName,
-						modified,
-						urls,
-						thumbnail,
+						...rest,
 					})
 				);
 			} catch (error) {
@@ -108,25 +91,14 @@ export default {
 					await dataSources.comics.getComicsEvents(comicsId);
 				return data.results.map(
 					({
-						id,
-						title,
-						description,
-						resourceURI,
-						urls,
-						modified,
-						start,
-						end,
-						thumbnail,
+						comics,
+						stories,
+						series,
+						characters,
+						creators,
+						...rest
 					}: IEvents) => ({
-						id,
-						title,
-						description,
-						resourceURI,
-						urls,
-						modified,
-						start,
-						end,
-						thumbnail,
+						...rest,
 					})
 				);
 			} catch (error) {
@@ -145,19 +117,14 @@ export default {
 					await dataSources.comics.getComicsStories(comicsId);
 				return data.results.map(
 					({
-						id,
-						title,
-						description,
-						type,
-						modified,
-						thumbnail,
+						comics,
+						series,
+						events,
+						characters,
+						creators,
+						...rest
 					}: IStories) => ({
-						id,
-						title,
-						description,
-						type,
-						modified,
-						thumbnail,
+						...rest,
 					})
 				);
 			} catch (error) {
