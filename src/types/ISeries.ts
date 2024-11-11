@@ -16,9 +16,9 @@ export interface ISeries {
 	rating: string;
 	modified: string;
 	thumbnail: IImage;
-	comics: IComics[];
-	stories: IStories[];
-	events: IEvents[];
-	characters: ICharacters[];
-	creators: ICreators[];
+	comics?: IComics[];
+	stories?: IStories[];
+	events?: IEvents[];
+	characters?: ICharacters[];
+	creators?: ICreators[];
 }

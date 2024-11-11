@@ -13,10 +13,6 @@ export default /* GraphQL */ `
 		"""
 		description: String
 		"""
-		O identificador de URL canônico deste recurso
-		"""
-		resourceURI: String
-		"""
 		Um conjunto de URLs de sites públicos para o evento
 		"""
 		urls: [Url]

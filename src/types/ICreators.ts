@@ -1,4 +1,4 @@
-import {IUrl, IImage} from './IGenerics';
+import {IUrl, IImage, IResponse} from './IGenerics';
 import {IComics} from './IComics';
 import {ISeries} from './ISeries';
 import {IStories} from './IStories';
@@ -6,9 +6,6 @@ import {IEvents} from './IEvents';
 
 export interface ICreators {
 	id: number;
-	firstName: string;
-	middleName: string;
-	lastName: string;
 	suffix: string;
 	fullName: string;
 	modified: string;
@@ -18,4 +15,13 @@ export interface ICreators {
 	stories?: IStories[];
 	comics?: IComics[];
 	events?: IEvents[];
+}
+
+export interface ICreatorsDataSources {
+	getCreators: () => Promise<IResponse<ICreators[]>>;
+	getCreatorsById: (creatorsId: string) => Promise<IResponse<ICreators>>;
+	getCreatorsComics: (creatorsId: number) => Promise<IResponse<IComics>>;
+	getCreatorsEvents: (creatorsId: number) => Promise<IResponse<IEvents>>;
+	getCreatorsSeries: (creatorsId: number) => Promise<IResponse<ISeries>>;
+	getCreatorsStories: (creatorsId: number) => Promise<IResponse<IStories>>;
 }

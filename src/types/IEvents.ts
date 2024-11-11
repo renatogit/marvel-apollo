@@ -9,7 +9,6 @@ export interface IEvents {
 	id: number;
 	title: string;
 	description: string;
-	resourceURI: string;
 	urls: IUrl[];
 	modified: string;
 	start: string;

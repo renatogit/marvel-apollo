@@ -1,7 +1,9 @@
 import Comics from './comics';
-import CharactersAPI from './characters';
+import Characters from './characters';
+import Creators from './creators';
 
 export default (cache) => ({
 	comics: new Comics({cache}),
-	characters: new CharactersAPI({cache}),
+	characters: new Characters({cache}),
+	creators: new Creators({cache}),
 });

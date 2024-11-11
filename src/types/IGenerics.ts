@@ -54,6 +54,5 @@ export interface IPrice {
 }
 
 export interface IID {
-	comicsId: string;
-	charactersId: string;
+	[key: string]: string;
 }

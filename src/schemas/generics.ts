@@ -68,7 +68,6 @@ export default /* GraphQL */ `
 	extend type GenericEntity {
 		suffix: String
 		fullName: String
-		series: GenericCollections
 	}
 
 	# Entidade Event

@@ -22,19 +22,13 @@ export interface ICharactersDataSources {
 	getCharactersById: (
 		charactersId: string
 	) => Promise<IResponse<ICharacters>>;
-	getCharactersComics: (
-		charactersId: number
-	) => Promise<IResponse<IComics[]>>;
+	getCharactersComics: (charactersId: number) => Promise<IResponse<IComics>>;
 	getCharactersCreators: (
 		charactersId: number
-	) => Promise<IResponse<ICharacters[]>>;
-	getCharactersEvents: (
-		charactersId: number
-	) => Promise<IResponse<IEvents[]>>;
+	) => Promise<IResponse<ICharacters>>;
+	getCharactersEvents: (charactersId: number) => Promise<IResponse<IEvents>>;
 	getCharactersStories: (
 		charactersId: number
-	) => Promise<IResponse<IStories[]>>;
-	getCharactersSeries: (
-		charactersId: number
-	) => Promise<IResponse<IStories[]>>;
+	) => Promise<IResponse<IStories>>;
+	getCharactersSeries: (charactersId: number) => Promise<IResponse<IStories>>;
 }

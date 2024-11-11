@@ -5,18 +5,6 @@ export default /* GraphQL */ `
 		"""
 		id: Float
 		"""
-		The first name of the creator
-		"""
-		firstName: String
-		"""
-		The middle name of the creator
-		"""
-		middleName: String
-		"""
-		The last name of the creator
-		"""
-		lastName: String
-		"""
 		The suffix or honorific for the creator
 		"""
 		suffix: String
@@ -29,10 +17,6 @@ export default /* GraphQL */ `
 		"""
 		modified: String
 		"""
-		The canonical URL identifier for this resource
-		"""
-		resourceURI: String
-		"""
 		A set of public web site URLs for the resource
 		"""
 		urls: [Url]
@@ -43,19 +27,19 @@ export default /* GraphQL */ `
 		"""
 		A resource list containing the series which feature work by this creator
 		"""
-		series: GenericCollections
+		series: [GenericEntity]
 		"""
 		A resource list containing the stories which feature work by this creator
 		"""
-		stories: GenericCollections
+		stories: [GenericEntity]
 		"""
 		A resource list containing the comics which feature work by this creator
 		"""
-		comics: GenericCollections
+		comics: [GenericEntity]
 		"""
 		A resource list containing the events which feature work by this creator.
 		"""
-		events: GenericCollections
+		events: [GenericEntity]
 	}
 
 	type CreatorDataContainer {

@@ -1,6 +1,6 @@
 export {ICharacters, ICharactersDataSources} from './ICharacters';
 export {IComics, IComicsDataSources} from './IComics';
-export {ICreators} from './ICreators';
+export {ICreators, ICreatorsDataSources} from './ICreators';
 export {IEvents} from './IEvents';
 export {ISeries} from './ISeries';
 export {IStories} from './IStories';

@@ -13,5 +13,12 @@ export default /* GraphQL */ `
 		charactersEvents(charactersId: ID!): [GenericEntity]
 		charactersSeries(charactersId: ID!): [GenericEntity]
 		charactersStories(charactersId: ID!): [GenericEntity]
+
+		creators: CreatorDataWrapper
+		creatorsById(creatorsId: ID!): CreatorDataWrapper
+		creatorsComics(creatorsId: ID!): [GenericEntity]
+		creatorsEvents(creatorsId: ID!): [GenericEntity]
+		creatorsSeries(creatorsId: ID!): [GenericEntity]
+		creatorsStories(creatorsId: ID!): [GenericEntity]
 	}
 `;
