@@ -14,14 +14,14 @@ import {
 
 export default {
 	Query: {
-		async creatorsById(
+		async creatorById(
 			_: ICreators,
 			{creatorsId}: IID,
 			{dataSources}: IDataSources<IEntity<ICreatorsDataSources>>
 		): Promise<IResponse<ICreators>> {
 			try {
 				const data =
-					await dataSources.creators.getCreatorsById(creatorsId);
+					await dataSources.creators.getCreatorById(creatorsId);
 				return data;
 			} catch (error) {
 				throw new Error(`ERROR: ${error.message}`);
@@ -37,7 +37,7 @@ export default {
 			const creatorsId = res.id;
 			try {
 				const {data} =
-					await dataSources.creators.getCreatorsComics(creatorsId);
+					await dataSources.creators.getCreatorComics(creatorsId);
 				return data.results.map(
 					({
 						creators,
@@ -62,7 +62,7 @@ export default {
 
 			try {
 				const {data} =
-					await dataSources.creators.getCreatorsEvents(creatorsId);
+					await dataSources.creators.getCreatorEvents(creatorsId);
 				return data.results.map(
 					({
 						comics,
@@ -88,7 +88,7 @@ export default {
 
 			try {
 				const {data} =
-					await dataSources.creators.getCreatorsSeries(creatorsId);
+					await dataSources.creators.getCreatorSeries(creatorsId);
 				return data.results.map(
 					({
 						comics,
@@ -114,7 +114,7 @@ export default {
 
 			try {
 				const {data} =
-					await dataSources.creators.getCreatorsStories(creatorsId);
+					await dataSources.creators.getCreatorStories(creatorsId);
 				return data.results.map(
 					({
 						comics,

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolvers/creatorsResolver/integration fetches creators and generate snapshots 1`] = `
+{
+  "kind": "single",
+  "singleResult": {
+    "data": {
+      "creators": {
+        "attributionHTML": "mock data",
+        "attributionText": "mock data",
+        "code": 200,
+        "copyright": "mock data",
+        "data": {
+          "count": 1,
+          "limit": 10,
+          "offset": 0,
+          "results": [
+            {
+              "fullName": "mock data",
+              "id": 13970,
+              "modified": "mock data",
+              "suffix": "mock data",
+              "thumbnail": {
+                "extension": "mock data",
+                "path": "mock data",
+              },
+              "urls": [
+                {
+                  "type": "mock data",
+                  "url": "mock data",
+                },
+              ],
+            },
+          ],
+          "total": 1,
+        },
+        "etag": "mock data",
+        "status": "mock data",
+      },
+    },
+    "errors": undefined,
+  },
+}
+`;

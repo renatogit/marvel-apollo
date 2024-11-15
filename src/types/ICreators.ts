@@ -19,9 +19,9 @@ export interface ICreators {
 
 export interface ICreatorsDataSources {
 	getCreators: () => Promise<IResponse<ICreators[]>>;
-	getCreatorsById: (creatorsId: string) => Promise<IResponse<ICreators>>;
-	getCreatorsComics: (creatorsId: number) => Promise<IResponse<IComics>>;
-	getCreatorsEvents: (creatorsId: number) => Promise<IResponse<IEvents>>;
-	getCreatorsSeries: (creatorsId: number) => Promise<IResponse<ISeries>>;
-	getCreatorsStories: (creatorsId: number) => Promise<IResponse<IStories>>;
+	getCreatorById: (creatorsId: string) => Promise<IResponse<ICreators>>;
+	getCreatorComics: (creatorsId: number) => Promise<IResponse<IComics>>;
+	getCreatorEvents: (creatorsId: number) => Promise<IResponse<IEvents>>;
+	getCreatorSeries: (creatorsId: number) => Promise<IResponse<ISeries>>;
+	getCreatorStories: (creatorsId: number) => Promise<IResponse<IStories>>;
 }

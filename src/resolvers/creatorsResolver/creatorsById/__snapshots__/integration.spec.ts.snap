@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolvers/creatorByIdResolver/integration fetches creatorById and generate snapshots 1`] = `
+{
+  "kind": "single",
+  "singleResult": {
+    "data": {
+      "creatorById": {
+        "attributionHTML": "mock data",
+        "attributionText": "mock data",
+        "code": 200,
+        "copyright": "mock data",
+        "data": {
+          "count": 1,
+          "limit": 10,
+          "offset": 0,
+          "results": [
+            {
+              "comics": [
+                {
+                  "collections": [
+                    {
+                      "name": "mock data",
+                      "resourceURI": "mock data",
+                    },
+                  ],
+                  "dates": [
+                    {
+                      "date": "mock data",
+                      "type": "mock data",
+                    },
+                  ],
+                  "description": "mock data",
+                  "id": 15902,
+                  "images": [
+                    {
+                      "extension": "mock data",
+                      "path": "mock data",
+                    },
+                  ],
+                  "modified": "mock data",
+                  "pageCount": 0,
+                  "prices": [
+                    {
+                      "price": 9.99,
+                      "type": "mock data",
+                    },
+                  ],
+                  "thumbnail": {
+                    "extension": "mock data",
+                    "path": "mock data",
+                  },
+                  "title": "mock data",
+                  "urls": [
+                    {
+                      "type": "mock data",
+                      "url": "mock data",
+                    },
+                  ],
+                },
+              ],
+              "events": [
+                {
+                  "description": "mock data",
+                  "end": "mock data",
+                  "id": 1,
+                  "modified": "mock data",
+                  "start": "mock data",
+                  "thumbnail": {
+                    "extension": "mock data",
+                    "path": "mock data",
+                  },
+                  "title": "mock data",
+                  "urls": [
+                    {
+                      "type": "mock data",
+                      "url": "mock data",
+                    },
+                  ],
+                },
+              ],
+              "fullName": "mock data",
+              "id": 13970,
+              "modified": "mock data",
+              "series": [
+                {
+                  "description": "mock data",
+                  "endYear": 2000,
+                  "id": 378,
+                  "modified": "mock data",
+                  "rating": "mock data",
+                  "startYear": 1999,
+                  "thumbnail": {
+                    "extension": "mock data",
+                    "path": "mock data",
+                  },
+                  "title": "mock data",
+                  "urls": [
+                    {
+                      "type": "mock data",
+                      "url": "mock data",
+                    },
+                  ],
+                },
+              ],
+              "stories": [
+                {
+                  "description": "mock data",
+                  "id": 25655,
+                  "modified": "mock data",
+                  "thumbnail": {
+                    "extension": "mock data",
+                    "path": "mock data",
+                  },
+                  "title": "mock data",
+                  "type": "mock data",
+                },
+              ],
+              "suffix": "mock data",
+              "thumbnail": {
+                "extension": "mock data",
+                "path": "mock data",
+              },
+              "urls": [
+                {
+                  "type": "mock data",
+                  "url": "mock data",
+                },
+              ],
+            },
+          ],
+          "total": 1,
+        },
+        "etag": "mock data",
+        "status": "mock data",
+      },
+    },
+    "errors": undefined,
+  },
+}
+`;

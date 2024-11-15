@@ -9,7 +9,7 @@ export default class Creators extends Marvel {
 		return data;
 	}
 
-	async getCreatorsById(creatorsId: string): Promise<IResponse<ICreators>> {
+	async getCreatorById(creatorsId: string): Promise<IResponse<ICreators>> {
 		const data = await this.get(
 			`creators/${encodeURIComponent(creatorsId)}`,
 			{
@@ -19,7 +19,7 @@ export default class Creators extends Marvel {
 		return data;
 	}
 
-	async getCreatorsComics(creatorsId: string): Promise<IResponse<ICreators>> {
+	async getCreatorComics(creatorsId: string): Promise<IResponse<ICreators>> {
 		const data = await this.get(
 			`creators/${encodeURIComponent(creatorsId)}/comics`,
 			{
@@ -29,7 +29,7 @@ export default class Creators extends Marvel {
 		return data;
 	}
 
-	async getCreatorsEvents(creatorsId: string): Promise<IResponse<ICreators>> {
+	async getCreatorEvents(creatorsId: string): Promise<IResponse<ICreators>> {
 		const data = await this.get(
 			`creators/${encodeURIComponent(creatorsId)}/events`,
 			{
@@ -39,7 +39,7 @@ export default class Creators extends Marvel {
 		return data;
 	}
 
-	async getCreatorsSeries(creatorsId: string): Promise<IResponse<ICreators>> {
+	async getCreatorSeries(creatorsId: string): Promise<IResponse<ICreators>> {
 		const data = await this.get(
 			`creators/${encodeURIComponent(creatorsId)}/series`,
 			{
@@ -49,9 +49,7 @@ export default class Creators extends Marvel {
 		return data;
 	}
 
-	async getCreatorsStories(
-		creatorsId: string
-	): Promise<IResponse<ICreators>> {
+	async getCreatorStories(creatorsId: string): Promise<IResponse<ICreators>> {
 		const data = await this.get(
 			`creators/${encodeURIComponent(creatorsId)}/stories`,
 			{

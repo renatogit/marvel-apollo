@@ -15,10 +15,10 @@ export default /* GraphQL */ `
 		charactersStories(charactersId: ID!): [GenericEntity]
 
 		creators: CreatorDataWrapper
-		creatorsById(creatorsId: ID!): CreatorDataWrapper
-		creatorsComics(creatorsId: ID!): [GenericEntity]
-		creatorsEvents(creatorsId: ID!): [GenericEntity]
-		creatorsSeries(creatorsId: ID!): [GenericEntity]
-		creatorsStories(creatorsId: ID!): [GenericEntity]
+		creatorById(creatorsId: ID!): CreatorDataWrapper
+		creatorComics(creatorsId: ID!): [GenericEntity]
+		creatorEvents(creatorsId: ID!): [GenericEntity]
+		creatorSeries(creatorsId: ID!): [GenericEntity]
+		creatorStories(creatorsId: ID!): [GenericEntity]
 	}
 `;
